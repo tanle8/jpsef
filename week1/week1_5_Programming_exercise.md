@@ -29,17 +29,17 @@ For this assignment, you will add or modify several methods in the PerimeterAssi
 
 [x] 2. Add code in the method `testPerimeter` to call `getNumPoints` and to print the result.
 
-3. Complete writing the method `getAverageLength` that has one parameter `s` that is of type __Shape__. 
+[x] 3. Complete writing the method `getAverageLength` that has one parameter `s` that is of type __Shape__. 
 
     This method returns a `number` of type __double__ that is the calculated average of all the sides’ lengths in the Shape S.
 
-4. Add code in the method `testPerimeter` to call the method `getAverageLength` and to print out the result.
+[x] 4. Add code in the method `testPerimeter` to call the method `getAverageLength` and to print out the result.
     
     Note if you were to select the file `example1.txt`, then the average side length should be __4.0__.
 
-5. Complete writing the method `getLargestSide` that has one parameter s that is of type Shape. This method returns a number of type double that is the longest side in the Shape S.
+[x] 5. Complete writing the method `getLargestSide` that has one parameter s that is of type Shape. This method returns a number of type double that is the longest side in the Shape S.
 
-6. Add code in the method `testPerimeter` to call the method `getLargestSide` and to print out the result. Note if you were to select the file example1.txt, then the longest side should be __5.0__.
+[x] 6. Add code in the method `testPerimeter` to call the method `getLargestSide` and to print out the result. Note if you were to select the file example1.txt, then the longest side should be __5.0__.
 
 7. Complete writing the method `getLargestX` that has one parameter s that is of type Shape. This method returns a number of type double that is the largest x value over all the points in the Shape s.
 
