@@ -11,11 +11,11 @@ import java.io.*;
 public class Part1 {
     public String findSimpleGene(String dna) {
         String result = "";
-        int start = dna.indexOf("atg");
+        int start = dna.toLowerCase().indexOf("atg");
         if (start == -1) {
             return "";
         }
-        int stop = dna.indexOf("taa", start+3);
+        int stop = dna.toLowerCase().indexOf("taa", start+3);
         if (stop == -1) {
             return "";
         } else {
