@@ -68,7 +68,7 @@ public class Part3 {
         // Set start index to 0
         int startIndex = 0;
         // Repeat the following steps
-        while (true)
+        while (startIndex >= 0)
         {
             // Find the next gene after startIndex
             String currGene = findGene(dna);
@@ -89,7 +89,7 @@ public class Part3 {
         int counter = 0;
         int startIndex = 0;
         
-        while (true)
+        while (startIndex >= 0)
         {
             // Find the next gene after startIndex
             String currGene = findGene(dna);
