@@ -36,8 +36,9 @@ Specifically, you should do the following:
 
         - 5.1. Find the index of the first occurrence of the start codon `“ATG”`. If there is no `“ATG”`, return the empty string.
         - 5.2. Find the index of the first occurrence of the stop codon `“TAA”` after the first occurrence of `“ATG”` that is a multiple of three away from the `“ATG”`. Hint: call `findStopCodon`.
-        - 5.3. Find the index of the first occurrence of the stop codon `“TAG”` after the first occurrence of `“ATG”` that is a multiple of three away from the `“ATG”`. Find the index of the first occurrence of the stop codon `“TGA”` after the first occurrence of “ATG” that is a multiple of three away from the `“ATG”`.
-        - 5.4. Return the gene formed from the `“ATG”` and the closest stop codon that is a multiple of three away. If there is no valid stop codon and therefore no gene, return the empty string.
+        - 5.3. Find the index of the first occurrence of the stop codon `“TAG”` after the first occurrence of `“ATG”` that is a multiple of three away from the `“ATG”`.
+        - 5.4. Find the index of the first occurrence of the stop codon `“TGA”` after the first occurrence of “ATG” that is a multiple of three away from the `“ATG”`.
+        - 5.5. Return the gene formed from the `“ATG”` and the closest stop codon that is a multiple of three away. If there is _no valid_ stop codon and therefore no gene, return the `empty string`.
 
 6. Write the void method `testFindGene` that has no parameters. You should create five DNA strings. The strings should have specific test cases such as:
 

@@ -27,9 +27,28 @@ public class Part1 {
         return dna.length();
     }
     
-    // public String findGene (String dna)
-    // {
-    // }
+    public String findGene (String dna)
+    {
+        int startIndex = dna.indexOf("ATG");
+        if (startIndex == -1)
+        {
+            return "";
+        }
+        
+        int taaIndex = findStopCodon(dna, startIndex, "TAA");
+        int tagIndex = findStopCodon(dna, startIndex, "TAG");
+        int tgaIndex = findStopCodon(dna, startIndex, "TGA");
+        int temp = Math.min(taaIndex, tagIndex);
+        int minIndex = Math.min(temp, tgaIndex);
+        // (optional) shorter minIndex
+        // int minIndex = Math.min(taaIndex, Math.min(tagIndex, tgaIndex));
+        if (minIndex == dna.length())
+        {
+            return "";
+        }
+        
+        return dna.substring(startIndex, minIndex+3);
+    }
     
     // public void printAllGenes ()
     // {
@@ -49,8 +68,15 @@ public class Part1 {
         System.out.println("tests finished");
     }
     
-    // public void testFindGene ()
-    // {
-    // }
+    public void testFindGene ()
+    {
+        String dna = "ATGCCCGGGAAATAACCC";
+        String gene = findGene(dna);
+        if (! gene.equals("ATGCCCGGGAAATAA"))
+        {
+            System.out.println("Error. Your string does not match with the answer");
+        }
+        System.out.println("Test finished. It's good.");
+    }
     
 }
