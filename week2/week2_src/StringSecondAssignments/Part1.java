@@ -1,4 +1,3 @@
-
 /**
  * In this class, we have 3 methods - findStopCodon, findGene, printAllGenes and 
  * 2 methods for testing prior methods.
@@ -24,13 +23,13 @@ public class Part1 {
                 currIndex = dna.indexOf(stopCodon, currIndex+1);
             }
         }
-        return dna.length();
+        return -1;
     }
     
     public String findGene (String dna)
     {
         int startIndex = dna.indexOf("ATG");
-        if (startIndex == -1)
+        if (startIndex == -1) 
         {
             return "";
         }
@@ -38,11 +37,26 @@ public class Part1 {
         int taaIndex = findStopCodon(dna, startIndex, "TAA");
         int tagIndex = findStopCodon(dna, startIndex, "TAG");
         int tgaIndex = findStopCodon(dna, startIndex, "TGA");
-        int temp = Math.min(taaIndex, tagIndex);
-        int minIndex = Math.min(temp, tgaIndex);
+        // int temp = Math.min(taaIndex, tagIndex);
+        // int minIndex = Math.min(temp, tgaIndex);
         // (optional) shorter minIndex
         // int minIndex = Math.min(taaIndex, Math.min(tagIndex, tgaIndex));
-        if (minIndex == dna.length())
+        int minIndex = 0;
+        if (taaIndex == -1 ||
+            (tgaIndex != -1 && tgaIndex < taaIndex))
+        {
+            minIndex = tgaIndex;
+        } else {
+            minIndex = taaIndex;
+        }
+        
+        if (minIndex == -1 ||
+            (tgaIndex != -1 && tagIndex < minIndex))
+        {
+            minIndex = tagIndex;
+        }
+
+        if (minIndex == -1)
         {
             return "";
         }
@@ -50,9 +64,26 @@ public class Part1 {
         return dna.substring(startIndex, minIndex+3);
     }
     
-    // public void printAllGenes ()
-    // {
-    // }
+    public void printAllGenes (String dna)
+    {
+        // Set start index to 0
+        int startIndex = 0;
+        // Repeat the following steps
+        while (true)
+        {
+            // Find the next gene after startIndex
+            String currGene = findGene(dna);
+            // If no gene was found, leave this loop
+            if (currGene.isEmpty())
+            {
+                break;
+            }
+            // Print that gene out
+            System.out.println(currGene);
+            // Set startIndex to just past the end of the gene
+            startIndex = dna.indexOf(currGene, startIndex) + currGene.length();
+        }
+    }
     
     public void testFindStopCodon ()
     {
@@ -62,9 +93,9 @@ public class Part1 {
         dex = findStopCodon(dna, 9, "TAA");
         if (dex != 21) System.out.println("error on 21");
         dex = findStopCodon(dna, 1, "TAA");
-        if (dex != 26) System.out.println("error on 26");
+        if (dex != -1) System.out.println("error on 26");
         dex = findStopCodon(dna, 0, "TAG");
-        if (dex != 26) System.out.println("error on 26 TAG");
+        if (dex != -1) System.out.println("error on 26 TAG");
         System.out.println("tests finished");
     }
     
@@ -77,6 +108,19 @@ public class Part1 {
             System.out.println("Error. Your string does not match with the answer");
         }
         System.out.println("Test finished. It's good.");
+    }
+
+    public void testPrintAllGenesOn(String dna)
+    {
+        System.out.println("Testing printAllGenes is on" + dna);
+        printAllGenes(dna);
+    }
+
+    public void testPrintAllGenes()
+    {
+        testPrintAllGenesOn("ATGATCTAATTTATGCTGCAACGGTGAAGA");
+        testPrintAllGenesOn("");
+        testPrintAllGenesOn("ATGATCATAAGAAGATAATAGAGGGCCATGTAA");
     }
     
 }
