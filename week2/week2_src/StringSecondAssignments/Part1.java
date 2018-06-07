@@ -122,5 +122,4 @@ public class Part1 {
         testPrintAllGenesOn("");
         testPrintAllGenesOn("ATGATCATAAGAAGATAATAGAGGGCCATGTAA");
     }
-    
 }

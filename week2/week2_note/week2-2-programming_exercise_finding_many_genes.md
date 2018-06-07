@@ -62,8 +62,12 @@ This assignment will write a method to determine how many occurrences of a strin
 Specifically, you should do the following:
 
 - 1. Create a new Java Class named `Part2` in the `StringsSecondAssignments` project.
-- 2. Write the method named `howMany` that has two String parameters named `stringa` and `stringb`. This method returns an integer indicating how many times stringa appears in stringb, where each occurrence of stringa must not overlap with another occurrence of it. For example, the call howMany(“GAA”, “ATGAACGAATTGAATC”) returns 3 as GAA occurs 3 times. The call howMany(“AA”, “ATAAAA”) returns 2. Note that the AA’s found cannot overlap.
-- 3. Write the void method testHowMany has no parameters. Add code in here to call howMany with several examples and print the results. Think carefully about what types of examples would be good to test to make sure your method works correctly.
+- 2. Write the method named `howMany` that:
+    - has two String parameters named `stringa` and `stringb`.
+    - This method returns an integer indicating how many times stringa appears in stringb, where each occurrence of stringa must not overlap with another occurrence of it. For example:
+        - The call `howMany(“GAA”, “ATGAACGAATTGAATC”)` returns __3__ as GAA occurs 3 times.
+        - The call `howMany(“AA”, “ATAAAA”)` returns __2__. Note that the AA’s found cannot overlap.
+- 3. Write the void method `testHowMany` has no parameters. Add code in here to call `howMany` with several examples and print the results. Think carefully about what types of examples would be good to test to make sure your method works correctly.
 
 ## Part 3: How Many Genes?
 
@@ -75,6 +79,9 @@ Specifically, you should do the following:
 
 2. Copy your methods from Part1 to find one gene and print all genes.
 
-3. Write the method named `countGenes` that has a String parameter named `dna` representing a string of DNA. This method returns the number of genes found in dna. For example the call `countGenes(“ATGTAAGATGCCCTAGT”)` returns __2__, finding the gene `ATGTAA` first and then the gene `ATGCCCTAG`. Hint: This is very similar to finding all genes and printing them, except that instead of printing all the genes you will count them.
+3. Write the method named `countGenes` that:
+    - has a String parameter named `dna` representing a string of DNA.
+    - This method returns the number of genes found in dna. For example:
+        - the call `countGenes(“ATGTAAGATGCCCTAGT”)` returns __2__, finding the gene `ATGTAA` first and then the gene `ATGCCCTAG`. Hint: This is very similar to finding all genes and printing them, except that instead of printing all the genes you will count them.
 
 4. Write the void method named `testCountGenes` that has no parameters. This method calls `countGenes` with many example strings and prints the result for each. You should create several examples with different numbers of genes to test your code.
