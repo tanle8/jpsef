@@ -22,23 +22,29 @@ Specifically, you should do the following:
 
 2. Create a new Java Class named `Part1`. The following methods go in this class.
 
-3. Write the method `findStopCodon` that has _three_ parameters, a String parameter named `dna`, an integer parameter named `startIndex` that represents where the first occurrence of ATG occurs in dna, and a String parameter named `stopCodon`. This method _returns_ the index of the first occurrence of `stopCodon` that appears past `startIndex` and is a multiple of 3 away from `startIndex`. If there is no such stopCodon, this method returns the length of the dna strand.
+3. Write the method `findStopCodon` that:
+    - has _three_ parameters, a String parameter named `dna`, an integer parameter named `startIndex` that represents where the first occurrence of ATG occurs in dna, and a String parameter named `stopCodon`.
+    - This method _returns_ the index of the first occurrence of `stopCodon` that appears past `startIndex` and is a multiple of 3 away from `startIndex`.
+    - If there is no such `stopCodon`, this method _returns_ the length of the dna strand.
 
-4. Write the void method `testFindStopCodon` that calls the method `findStopCodon` with several examples and prints out the results to check if `findStopCodon` is working correctly. Think about what types of examples you should check. For example, you may want to check some strings of DNA that have genes and some that do not. What other examples should you check?
+4. Write the void method `testFindStopCodon` that:
+    - calls the method `findStopCodon` with several examples and prints out the results to check if `findStopCodon` is working correctly. Think about what types of examples you should check.
+    - For example, you may want to check some strings of DNA that have genes and some that do not. What other examples should you check?
 
-5. Write the method `findGene` that has one String parameter `dna`, representing a string of DNA. In this method you should do the following:
+5. Write the method `findGene` that:
+    - has one String parameter `dna`, representing a string of DNA. In this method you should do the following:
 
-    5.1. Find the index of the first occurrence of the start codon “ATG”. If there is no “ATG”, return the empty string.
-    5.2. Find the index of the first occurrence of the stop codon “TAA” after the first occurrence of “ATG” that is a multiple of three away from the “ATG”. Hint: call findStopCodon.
-    5.3. Find the index of the first occurrence of the stop codon “TAG” after the first occurrence of “ATG” that is a multiple of three away from the “ATG”. Find the index of the first occurrence of the stop codon “TGA” after the first occurrence of “ATG” that is a multiple of three away from the “ATG”.
-    5.4. Return the gene formed from the “ATG” and the closest stop codon that is a multiple of three away. If there is no valid stop codon and therefore no gene, return the empty string.
+        - 5.1. Find the index of the first occurrence of the start codon `“ATG”`. If there is no `“ATG”`, return the empty string.
+        - 5.2. Find the index of the first occurrence of the stop codon `“TAA”` after the first occurrence of `“ATG”` that is a multiple of three away from the `“ATG”`. Hint: call `findStopCodon`.
+        - 5.3. Find the index of the first occurrence of the stop codon `“TAG”` after the first occurrence of `“ATG”` that is a multiple of three away from the `“ATG”`. Find the index of the first occurrence of the stop codon `“TGA”` after the first occurrence of “ATG” that is a multiple of three away from the `“ATG”`.
+        - 5.4. Return the gene formed from the `“ATG”` and the closest stop codon that is a multiple of three away. If there is no valid stop codon and therefore no gene, return the empty string.
 
 6. Write the void method `testFindGene` that has no parameters. You should create five DNA strings. The strings should have specific test cases such as:
 
     1. DNA with no `“ATG”`,
-    2. DNA with “ATG” and one valid stop codon,
-    3. DNA with “ATG” and multiple valid stop codons,
-    4. DNA with “ATG” and no valid stop codons.
+    2. DNA with `“ATG”` and one valid stop codon,
+    3. DNA with `“ATG”` and multiple valid stop codons,
+    4. DNA with `“ATG”` and no valid stop codons.
 
     Think carefully about what would be good examples to test. For each DNA string you should:
 
