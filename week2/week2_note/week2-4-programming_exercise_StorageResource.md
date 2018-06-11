@@ -47,7 +47,7 @@ Write a method `testProcessGenes`. This method will call your `processGenes` met
 - one DNA string that has some genes longer than 9 characters,
 - one DNA string that has no genes longer than 9 characters,
 - one DNA string that has some genes whose C-G-ratio is higher than 0.35, and
-- one DNA string that has some genes whose C-G-ratio is lower than 0.35. 
+- one DNA string that has some genes whose C-G-ratio is lower than 0.35.
 
 Write code in `testProcessGenes` to call `processGenes` five times with `StorageResources` made from each of your five DNA string test cases.
 
