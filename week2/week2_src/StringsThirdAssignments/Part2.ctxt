@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Part2
+comment0.text=\n\ 1.\ cgRatio\ method\ returns\ the\ ratio\ of\ C's\ and\ G's\ in\ dna\ as\ a\ fraction\ of\n\ the\ entire\ strand\ of\ DNA\n\ \n\ 2.\ countCTG\ (String\ dna)\ returns\ the\ `number\ of\ times`\ the\ codon\ CTG\ appears\ \n\ in\ dna\n\ \ \n\ @author\ (Tan\ Le)\ \n\ @version\ (13-06-2018)\n
+comment1.params=dna
+comment1.target=double\ cgRatio(java.lang.String)
+comment2.params=
+comment2.target=void\ testCgRatio()
+comment3.params=dna
+comment3.target=int\ countCTG(java.lang.String)
+comment4.params=
+comment4.target=void\ testCountCTG()
+numComments=5
