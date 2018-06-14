@@ -75,7 +75,7 @@ public class Part1 {
         while (true)
         {
             // Find the next gene after startIndex
-            String currGene = findGene(dna);
+            String currGene = findGene(dna, startIndex);
             // If no gene was found, leave this loop
             if (currGene.isEmpty())
             {
@@ -89,6 +89,8 @@ public class Part1 {
         
         return geneList;
     }
+
+	
     
     public void testGetAllGenesOn (String dna)
     {

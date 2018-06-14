@@ -41,22 +41,20 @@ Write a method `countCTG` that:
 
 ## Part 3
 
-Write the void method `processGenes` that has one parameter `sr`, which is a `StorageResource` of strings.
-This method processes all the strings in `sr` to find out information about them. Specifically, it should:
+1. Write the void method `processGenes` that has one parameter `sr`, which is a `StorageResource` of strings. This method processes all the strings in `sr` to find out information about them. Specifically, it should:
 
 - print all the Strings in `sr` that are _longer than 9 characters_
 - print the number of Strings in sr that are _longer than 9 characters_
-- print the Strings in `sr` whose `C-G-ratio` is higher than `0.35`
-- print the number of strings in sr whose `C-G-ratio` is higher than `0.35`
-- print the length of the longest gene in `sr`
+- print the Strings in `sr` whose `C-G-ratio` is __higher than `0.35`__
+- print the number of strings in sr whose `C-G-ratio` is __higher than `0.35`__
+- print the __length of the longest gene in `sr`__
 
 Modify your `processGenes` method so that:
 
 - it prints all the Strings that are longer than 60 characters and
 - prints the number of Strings that are longer than 60 characters (you do not need to make changes to the rest of the method).
 
-Write a method `testProcessGenes` . This method will call your `processGenes` method five times with `StorageResources` made from each of your five DNA string test cases on different test cases.
-Think of five DNA strings to use as test cases. These should include:
+2. Write a method `testProcessGenes` . This method will call your `processGenes` method five times with `StorageResources` made from each of your five DNA string test cases on different test cases. Think of five DNA strings to use as test cases. These should include:
 
 - one DNA string that has some genes longer than 9 characters,
 - one DNA string that has no genes longer than 9 characters,
