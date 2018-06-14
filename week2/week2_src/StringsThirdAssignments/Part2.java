@@ -31,20 +31,8 @@ public class Part2 {
         
         return cgCounter / lenDNA;
     }
-    
-    public void testCgRatio ()
-    {
-        String dna = "ATGCCATAG,";
-        if (cgRatio(dna) == (4/9))
-        {
-            System.out.println("It's good!");
-        } else
-        {
-            System.out.println("Sorry. Check your function please!");
-        }
-    }
-    
-    public int countCTG (String dna)
+
+public int countCTG (String dna)
     {
         dna = dna.toLowerCase();
         int start = 0;
@@ -66,6 +54,19 @@ public class Part2 {
         
         return counterCTG;
     }
+
+    public void testCgRatio ()
+    {
+        String dna = "ATGCCATAG,";
+        if (cgRatio(dna) == (4/9))
+        {
+            System.out.println("It's good!");
+        } else
+        {
+            System.out.println("Sorry. Check your function please!");
+        }
+    }
+
 
     public void testCountCTG ()
     {

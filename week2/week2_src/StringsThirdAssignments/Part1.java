@@ -8,41 +8,41 @@
 import edu.duke.StorageResource;
 
 public class Part1 {
+    
     public int findStopCodon (String dna, int startIndex, String stopCodon)
     {
-        // Find stopCodon starting from (startIndex + 3), currIndex
-        int currIndex = dna.indexOf(stopCodon, startIndex+3);
+        int currIndex = startIndex;
         while (currIndex != -1)
         {
+            currIndex = dna.indexOf(stopCodon, startIndex);
             int diff = currIndex - startIndex;
             if (diff % 3 == 0)
             {
-                return currIndex;
+                break;
             }
-            else
-            {
-                currIndex = dna.indexOf(stopCodon, currIndex+1);
-            }
+            startIndex = startIndex + diff + 3 - (diff % 3);
         }
-        return -1;
+
+        return currIndex;
     }
     
-    public String findGene (String dna)
+    public String findGene(String dna, int position)
     {
-        int startIndex = dna.indexOf("ATG");
+        int startIndex = position;
+        startIndex = dna.indexOf("ATG", startIndex);
         if (startIndex == -1) 
         {
             return "";
         }
         
-        int taaIndex = findStopCodon(dna, startIndex, "TAA");
-        int tagIndex = findStopCodon(dna, startIndex, "TAG");
-        int tgaIndex = findStopCodon(dna, startIndex, "TGA");
+        int taaIndex = findStopCodon(dna, startIndex+3, "TAA");
+        int tagIndex = findStopCodon(dna, startIndex+3, "TAG");
+        int tgaIndex = findStopCodon(dna, startIndex+3, "TGA");
         // int temp = Math.min(taaIndex, tagIndex);
         // int minIndex = Math.min(temp, tgaIndex);
         // (optional) shorter minIndex
         // int minIndex = Math.min(taaIndex, Math.min(tagIndex, tgaIndex));
-        int minIndex = 0;
+        int minIndex = -1;
         if (taaIndex == -1 ||
             (tgaIndex != -1 && tgaIndex < taaIndex))
         {
@@ -65,7 +65,7 @@ public class Part1 {
         return dna.substring(startIndex, minIndex+3);
     }
     
-    public StorageResource getAllGenes (String dna)
+    public StorageResource getAllGenes(String dna)
     {
         // Creat an empty StorageResource, call it geneList
         StorageResource geneList = new StorageResource();
@@ -84,13 +84,11 @@ public class Part1 {
             // Add the gene into geneList
             geneList.add(currGene);
             // Set startIndex to just past the end of the gene
-            startIndex = dna.indexOf(currGene, startIndex) + currGene.length();
+            startIndex = dna.indexOf("ATG", startIndex) + currGene.length();
         }
         
         return geneList;
     }
-
-	
     
     public void testGetAllGenesOn (String dna)
     {

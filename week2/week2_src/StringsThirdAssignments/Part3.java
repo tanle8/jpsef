@@ -75,7 +75,7 @@ public class Part3 {
         
         FileResource fr = new FileResource("brca1line.fa");
         String dnaSequence = fr.asString().toLowerCase();
-        // System.out.println(dnaSequence);
+        System.out.println(dnaSequence);
         Part1 part11 = new Part1();
         geneList = part11.getAllGenes(dnaSequence);
         System.out.println("Gene list size: " + geneList.size());
