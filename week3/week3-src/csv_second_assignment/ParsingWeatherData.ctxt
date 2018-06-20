@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ParsingWeatherData
+comment1.params=parser
+comment1.target=org.apache.commons.csv.CSVRecord\ coldestHourInFile(org.apache.commons.csv.CSVParser)
+comment2.params=
+comment2.target=void\ testColdestHourInFile()
+comment3.params=
+comment3.target=java.lang.String\ fileWithColdestTemperature()
+comment4.params=
+comment4.target=void\ testFileWithColdestTemperature()
+comment5.params=currentRow\ smallestSoFar
+comment5.target=org.apache.commons.csv.CSVRecord\ getSmallestOfTwo(org.apache.commons.csv.CSVRecord,\ org.apache.commons.csv.CSVRecord)
+numComments=6
