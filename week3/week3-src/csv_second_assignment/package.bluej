@@ -1,3 +1,33 @@
 #BlueJ package file
-#Wed Jun 20 13:33:06 ICT 2018
+editor.fx.0.height=510
+editor.fx.0.width=960
+editor.fx.0.x=677
+editor.fx.0.y=242
+objectbench.height=75
+objectbench.width=936
+package.divider.horizontal=0.6
+package.divider.vertical=0.7990196078431373
+package.editor.height=319
+package.editor.width=830
+package.editor.x=960
+package.editor.y=537
+package.frame.height=510
+package.frame.width=960
+package.numDependencies=0
+package.numTargets=1
+package.showExtends=true
+package.showUses=true
 project.charset=UTF-8
+readme.height=58
+readme.name=@README
+readme.width=47
+readme.x=10
+readme.y=10
+target1.height=50
+target1.name=ParsingWeatherData
+target1.showInterface=false
+target1.type=ClassTarget
+target1.typeParameters=
+target1.width=160
+target1.x=70
+target1.y=10

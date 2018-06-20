@@ -63,7 +63,7 @@ Specifically you should write the following methods.
 - has one parameter, a CSVParser named parser.
 - This method returns the CSVRecord that has the lowest humidity. If there is a tie, then return the first such record that was found.
 - __Note:__
-  - that sometimes there is not a number in the Humidity column but instead there is the string “N/A”. This only happens very rarely. You should check to make sure the value you get is not “N/A” before converting it to a number.
+  - that sometimes there is not a number in the Humidity column but instead there is the string "N/A". This only happens very rarely. You should check to make sure the value you get is not “N/A” before converting it to a number.
 
   - Also note that the header for the time is either `TimeEST` or `TimeEDT`, depending on the time of year. You will instead use the `DateUTC` field at the right end of the data file to get both the date and time of a temperature reading.
 

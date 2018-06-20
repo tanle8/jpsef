@@ -2,8 +2,8 @@
 /**
  * Write a description of ParsingWeatherData here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Tan Le) 
+ * @version (20-09-2018)
  */
 
 import org.apache.commons.csv.*;
@@ -84,11 +84,17 @@ public class ParsingWeatherData {
         CSVParser parser2 = fr.getCSVParser();
         for (CSVRecord currentRow : parser2)
         {
-            double temp = Double.parseDouble(currentRow.get("TemperatureF"));
             String date = currentRow.get("DateUTC");
+            double temp = Double.parseDouble(currentRow.get("TemperatureF"));
             System.out.println(date + " " + temp);
         }
     }
+    
+    public CSVRecord lowestHumidityInFile(CSVParser parser)
+    {
+        
+    }
+    
     
     public CSVRecord getSmallestOfTwo(CSVRecord currentRow, CSVRecord smallestSoFar)
     {
