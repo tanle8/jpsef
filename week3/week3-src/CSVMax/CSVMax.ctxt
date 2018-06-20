@@ -8,4 +8,6 @@ comment3.params=
 comment3.target=org.apache.commons.csv.CSVRecord\ hottestInManyDays()
 comment4.params=
 comment4.target=void\ testHottestInManyDays()
-numComments=5
+comment5.params=currentRow\ largestSoFar
+comment5.target=org.apache.commons.csv.CSVRecord\ getLargestOfTwo(org.apache.commons.csv.CSVRecord,\ org.apache.commons.csv.CSVRecord)
+numComments=6

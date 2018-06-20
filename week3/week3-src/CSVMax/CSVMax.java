@@ -19,23 +19,7 @@ public class CSVMax
         // For each row (currentRow) in the CSV file
         for (CSVRecord currentRow : parser)
         {
-            // If largestSoFar is nothing
-            if (largestSoFar == null)
-            {
-                largestSoFar = currentRow;
-            }
-            // Otherwise
-            else
-            {
-                double currentTemp = Double.parseDouble(currentRow.get("TemperatureF"));
-                double largestTemp = Double.parseDouble(largestSoFar.get("TemperatureF"));
-                // Check if currentRow's temperature > largestSoFar
-                if (currentTemp > largestTemp)
-                {
-                    // If so update largestSoFar to currentRow
-                    largestSoFar = currentRow;
-                }
-            }
+            largestSoFar = getLargestOfTwo(currentRow, largestSoFar);
         }
         // The largestSoFar is the answer
         return largestSoFar;
@@ -59,21 +43,8 @@ public class CSVMax
             FileResource fr = new FileResource(f);
             // use method to get largest in file
             CSVRecord currentRow = hottestHourseInFile(fr.getCSVParser());
-            if (largestSoFar == null)
-            {
-                largestSoFar = currentRow;
-            }
-            else
-            {
-                double currentTemp = Double.parseDouble(currentRow.get("TemperatureF"));
-                double largestTemp = Double.parseDouble(largestSoFar.get("TemperatureF"));
-                // Check if currentRow's temperature > largestSoFar
-                if (currentTemp > largestTemp)
-                {
-                    // If so update largestSoFar to currentRow
-                    largestSoFar = currentRow;
-                }
-            }
+            //
+            largestSoFar = getLargestOfTwo(currentRow, largestSoFar);
         }
         // The largestSoFar is the answer
         return largestSoFar;
@@ -83,5 +54,28 @@ public class CSVMax
     {
         CSVRecord largest = hottestInManyDays();
         System.out.println("hottest temperature was " + largest.get("TemperatureF") + " at " + largest.get("DateUTC"));
+    }
+    
+    public CSVRecord getLargestOfTwo(CSVRecord currentRow, CSVRecord largestSoFar)
+    {
+        // If largestSoFar is nothing
+        if (largestSoFar == null)
+        {
+            largestSoFar = currentRow;
+        }
+        // Otherwise
+        else
+        {
+            double currentTemp = Double.parseDouble(currentRow.get("TemperatureF"));
+            double largestTemp = Double.parseDouble(largestSoFar.get("TemperatureF"));
+            // Check if currentRow's temperature > largestSoFar
+            if (currentTemp > largestTemp)
+            {
+                // If so update largestSoFar to currentRow
+                largestSoFar = currentRow;
+            }
+        }
+        
+        return largestSoFar;
     }
 }
