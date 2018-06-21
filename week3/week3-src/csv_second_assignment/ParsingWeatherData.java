@@ -21,7 +21,7 @@ public class ParsingWeatherData {
         // For each row (currentRow) in the CSV file
         for (CSVRecord currentRow : parser)
         {
-            smallestSoFar = getSmallestOfTwo(currentRow, smallestSoFar);
+            smallestSoFar = getSmallestOfTwo(currentRow, smallestSoFar, "TemperatureF");
         }
         
         return smallestSoFar;
@@ -92,11 +92,45 @@ public class ParsingWeatherData {
     
     public CSVRecord lowestHumidityInFile(CSVParser parser)
     {
+        CSVRecord lowestHumRecord = null;
+        int currentHum;
+        int lowestHum;
         
+        for (CSVRecord currentRow : parser)
+        {
+            if (lowestHumRecord == null)
+            {
+                lowestHumRecord = currentRow;
+            }
+            else
+            {
+                if (!currentRow.get("Humidity").equals("N/A") && !lowestHumRecord.get("Humidity").equals("N/A"))
+                {
+                    currentHum = Integer.parseInt(currentRow.get("Humidity"));
+                    lowestHum = Integer.parseInt(lowestHumRecord.get("Humidity"));
+                    
+                    if (currentHum < lowestHum)
+                    {
+                        lowestHumRecord = currentRow;
+                    }
+                }
+            }
+        }
+        
+        return lowestHumRecord;
     }
     
     
-    public CSVRecord getSmallestOfTwo(CSVRecord currentRow, CSVRecord smallestSoFar)
+    public void testLowestHumidityInFile()
+    {
+        FileResource fr = new FileResource();
+        CSVParser parser = fr.getCSVParser();
+        CSVRecord lowestHumRecord = lowestHumidityInFile(parser);
+        
+        System.out.println("Lowest Humidity was " + lowestHumRecord.get("Humidity") + " at " + lowestHumRecord.get("DateUTC"));
+    }
+    
+    public CSVRecord getSmallestOfTwo(CSVRecord currentRow, CSVRecord smallestSoFar, String columnName)
     {
         // If largestSoFar is nothing
         if (smallestSoFar == null)
@@ -106,8 +140,8 @@ public class ParsingWeatherData {
         // Otherwise
         else
         {
-            double currentTemp = Double.parseDouble(currentRow.get("TemperatureF"));
-            double smallestTemp = Double.parseDouble(smallestSoFar.get("TemperatureF"));
+            double currentTemp = Double.parseDouble(currentRow.get(columnName));
+            double smallestTemp = Double.parseDouble(smallestSoFar.get(columnName));
             // Check if currentRow's temperature < smallestSoFar
             if (currentTemp < smallestTemp)
             {
