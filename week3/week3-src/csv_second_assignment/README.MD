@@ -110,7 +110,7 @@ Specifically you should write the following methods.
     No temperatures with that humidity
     ```
 
-    If you run the method checking for humidity greater than or equal to 80 and select the file March 20, 2014, a wetter day, the method should print out:
+    If you run the method checking for humidity greater than or equal to 80 and select the file __March 20, 2014__, a wetter day, the method should print out:
 
     ```text
     Average Temp when high Humidity is 41.78666666666667

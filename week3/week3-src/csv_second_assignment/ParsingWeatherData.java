@@ -175,6 +175,75 @@ public class ParsingWeatherData {
         System.out.println("Lowest Humidity was " + lowestHumRecord.get("Humidity") + " at " + lowestHumRecord.get("DateUTC"));
     }
     
+    public double averageTemperatureInFile(CSVParser parser)
+    {
+        double num = 0.0;
+        double sum = 0.0;
+        double average = 0.0;
+        
+        for (CSVRecord currentRow : parser)
+        {
+            double temperature = Double.parseDouble(currentRow.get("TemperatureF"));
+            sum += temperature;
+            num++;
+        }
+        
+        average = sum/num;
+
+        return average;
+    }
+    
+    public void testAverageTemperatureInFile()
+    {
+        FileResource fr = new FileResource();
+        CSVParser parser = fr.getCSVParser();
+        double average = averageTemperatureInFile(parser);
+        
+        System.out.println("Average temperature in file is " + average);
+    }
+    
+    public double averageTemperatureWithHighHumidityInFile(CSVParser parser, int humidityThreshold)
+    {
+        double num = 0.0;
+        double sum = 0.0;
+        double average = 0.0;
+        
+        for (CSVRecord currentRow : parser)
+        {
+            if (!currentRow.get("Humidity").equals("N/A"))
+            {
+                int currentHum = Integer.parseInt(currentRow.get("Humidity"));
+                if (currentHum >= humidityThreshold)
+                {
+                    double temperature = Double.parseDouble(currentRow.get("TemperatureF"));
+                    sum += temperature;
+                    num++;
+                }
+            }
+        }
+        
+        average = sum/num;
+        
+        return average;
+    }
+    
+    public void testAverageTemperatureWithHighHumidityInFile()
+    {
+        FileResource fr = new FileResource();
+        CSVParser parser = fr.getCSVParser();
+        double average = averageTemperatureWithHighHumidityInFile(parser, 80);
+        
+        if (!Double.isNaN(average))
+        {
+            System.out.println("Average Temp when high Humidity is " + average);
+        }
+        else
+        {
+            System.out.println("No Temp found");
+        }
+        
+    }
+    
     public CSVRecord getSmallestOfTwo(CSVRecord currentRow, CSVRecord smallestSoFar, String columnName)
     {
         // If largestSoFar is nothing
