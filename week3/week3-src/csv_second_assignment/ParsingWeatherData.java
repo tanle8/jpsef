@@ -130,6 +130,51 @@ public class ParsingWeatherData {
         System.out.println("Lowest Humidity was " + lowestHumRecord.get("Humidity") + " at " + lowestHumRecord.get("DateUTC"));
     }
     
+    public CSVRecord lowestHumidityInManyFiles()
+    {
+        CSVRecord lowestHumRecord = null;
+        int currentHum;
+        int lowestHum;
+        
+        DirectoryResource dr = new DirectoryResource();
+        // Iterate over files
+        for (File f : dr.selectedFiles())
+        {
+            // Now we have this file, create new file resource
+            FileResource fr = new FileResource(f);
+            //
+            CSVParser parser = fr.getCSVParser();
+            // Find the lowest Humidity Record in the file
+            CSVRecord currentRow = lowestHumidityInFile(parser);
+            
+            if (lowestHumRecord == null)
+            {
+                lowestHumRecord = currentRow;
+            }
+            else
+            {
+                if (!currentRow.get("Humidity").equals("N/A") && !lowestHumRecord.get("Humidity").equals("N/A"))
+                {
+                    currentHum = Integer.parseInt(currentRow.get("Humidity"));
+                    lowestHum = Integer.parseInt(lowestHumRecord.get("Humidity"));
+                    
+                    if (currentHum < lowestHum)
+                    {
+                        lowestHumRecord = currentRow;
+                    }
+                }
+            }
+        }
+        
+        return lowestHumRecord;
+    }
+    
+    public void testLowestHumidityInManyFiles()
+    {
+        CSVRecord lowestHumRecord = lowestHumidityInManyFiles();
+        System.out.println("Lowest Humidity was " + lowestHumRecord.get("Humidity") + " at " + lowestHumRecord.get("DateUTC"));
+    }
+    
     public CSVRecord getSmallestOfTwo(CSVRecord currentRow, CSVRecord smallestSoFar, String columnName)
     {
         // If largestSoFar is nothing

@@ -85,7 +85,8 @@ Specifically you should write the following methods.
 
 4. Write the method __lowestHumidityInManyFiles__ that:
 - has no parameters.
-- This method returns a CSVRecord that has the lowest humidity over all the files. If there is a tie, then return the first such record that was found. - - You should also write a void method named _testLowestHumidityInManyFiles()__ to test this method and to print the _lowest_ humidity AND the _time_ the lowest humidity occurred. Be sure to test this method on two files so you can check if it is working correctly. If you run this program and select the files for January 19, 2014 and January 20, 2014, you should get:
+- This method returns a `CSVRecord` that has the lowest humidity over all the files. If there is a tie, then return the first such record that was found.
+- You should also write a void method named _testLowestHumidityInManyFiles()__ to test this method and to print the _lowest_ humidity AND the _time_ the lowest humidity occurred. Be sure to test this method on two files so you can check if it is working correctly. If you run this program and select the files for __January 19, 2014__ and __January 20, 2014__, you should get:
 
     ```text
     Lowest Humidity was 24 at 2014-01-20 19:51:00
@@ -93,22 +94,23 @@ Specifically you should write the following methods.
 
 5. Write the method __averageTemperatureInFile__ that:
 - has one parameter, a CSVParser named parser.
-- This method returns a double that represents the average temperature in the file. You should also write a void method named __testAverageTemperatureInFile()__ to test this method. When this method runs and selects the file for January 20, 2014, the method should print out
+- This method returns a double that represents the average temperature in the file.
+- You should also write a void method named __testAverageTemperatureInFile()__ to test this method. When this method runs and selects the file for __January 20, 2014__, the method should print out:
 
     ```text
     Average temperature in file is 44.93333333333334
     ```
 
 6. Write the method __averageTemperatureWithHighHumidityInFile__ that:
-- has two parameters, a CSVParser named parser and an integer named value.
+- has two parameters, a `CSVParser` named parser and an integer named value.
 - This method returns a double that represents the average temperature of only those temperatures when the humidity was greater than or equal to value.
-- You should also write a void method named `testAverageTemperatureWithHighHumidityInFile()` to test this method. When this method runs checking for humidity greater than or equal to 80 and selects the file for January 20, 2014, the method should print out
+- You should also write a void method named `testAverageTemperatureWithHighHumidityInFile()` to test this method. When this method runs checking for humidity greater than or equal to 80 and selects the file for __January 20, 2014__, the method should print out:
 
     ```text
     No temperatures with that humidity
     ```
 
-    If you run the method checking for humidity greater than or equal to 80 and select the file March 20, 2014, a wetter day, the method should print out
+    If you run the method checking for humidity greater than or equal to 80 and select the file March 20, 2014, a wetter day, the method should print out:
 
     ```text
     Average Temp when high Humidity is 41.78666666666667
