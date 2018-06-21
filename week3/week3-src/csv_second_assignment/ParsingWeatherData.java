@@ -29,9 +29,11 @@ public class ParsingWeatherData {
     
     public void testColdestHourInFile()
     {
-        FileResource fr = new FileResource("../../week3-data/nc_weather/2015/weather-2015-01-01.csv");
-        CSVRecord smallest = coldestHourInFile(fr.getCSVParser());
-        System.out.println("coldest temperature was " + smallest.get("TemperatureF") + " at " + smallest.get("TimeEST"));
+        FileResource fr = new FileResource();
+        CSVParser parser = fr.getCSVParser();
+        
+        CSVRecord smallest = coldestHourInFile(parser);
+        System.out.println("coldest temperature was " + smallest.get("TemperatureF") + " at " + smallest.get("DateUTC"));
     }
     
     public String fileWithColdestTemperature()
