@@ -79,11 +79,93 @@ You will write a program with several methods and tester methods to test each me
     - an integer named year representing the year that name was born,
     - an integer named newYear and
     - a string named gender (F for female and M for male).
-  - This method determines what name would have been named if they were born in a different year, based on the same popularity. That is, you should determine the rank of name in the year they were born, and then print the name born in newYear that is at the same rank and same gender. For example, using the files "yob2012short.csv" and "yob2014short.csv", notice that in 2012 Isabella is the third most popular girl's name. If Isabella was born in 2014 instead, she would have been named Sophia, the third most popular girl's name that year. The output might look like this:
+  - This method determines what name would have been named if they were born in a different year, based on the same popularity. That is, you should determine the rank of name in the year they were born, and then print the name born in newYear that is at the same rank and same gender.
+    - For example, using the files "yob2012short.csv" and "yob2014short.csv", notice that in 2012 Isabella is the third most popular girl's name. If Isabella was born in 2014 instead, she would have been named Sophia, the third most popular girl's name that year. The output might look like this:
 
-    ```text
-    Isabella born in 2012 would be Sophia if she was born in 2014.
-    ```
+      ```text
+      Isabella born in 2012 would be Sophia if she was born in 2014.
+      ```
 
 Link to FAQ page for this course: http://www.dukelearntoprogram.com/course2/faq.php
+
+## Extends your program
+
+Here are some optional ideas to extend your program even further:
+
+- __Test edge cases__. 'Edge cases' refer to special situations where a program might break down. For example:
+  - consider searching for names that don't exist at all on the list of baby names provided,
+  - or only appear in some years but not in others.
+  - What happens when you try to find the most popular decade for such a name?
+
+- __Use a different set of data__. Does your home country record a similar set of data? Try finding a similar but different set of data and modifying your program to work with it.
+  - What changes do you have to make with the new data set?
+  - What are the similarities?
+  - How might those similarities and differences affect how you would write a program that used data from every country in the world?
+
+- __Explore different statistics__.
+  - If you wanted to know the median rank for a name over a period of multiple years, rather than the most popular year in that span, how would you write your program? 
+  - What about finding a list of all the names that were used for fewer than 10 children in a particular year?
+  - What about finding the most popular name and year in the entire data set from a short list of your friends and family names?
+  - What are your own ideas for discovering interesting facts from this data set?
+
+- __Adapt your program to a new problem__. This project focused on reading data from CSV files, which is a common data storage format. Try adapting your baby name program to do something new. For example,
+  - you might be a teacher with a gradebook of student test results; you could use your program to find the average scores for each test.
+  - Or you might run a business and have accounting records; you could find your most profitable month over the last two years of operation.
+
+Whatever you do to extend your program and solve new problems, share it with us and your peers in the forums! Happy programming!
+
+## Honors Content - Batch Grayscale Images
+
+Convert Image to Gray-Scale
+
+Problem: gray-scale
+
+- Color image -> Shades of Gray
+
+### Always start with 7 Steps approach !
+
+#### Step 1. Small instance by hand
+
+- Work with a 2x2 image
+
+The question is how do you figure out what shades of gray to use for this pixel? --> __You need domain knowledge before you can proceed !!!__:
+
+- In this particular problem, the knowledge you need is about `colors` or `graphics`.
+- Domain Knowledge
+  - What is gray? -- A color is a shade of gray if its __R__ed, __B__lue, and __G__reen components are all the same
+  - How to convert RGB to gray?
+    - Average? <-- __Simple, Work for us__
+    - Weighted Average?
+    - More complex formula?
+
+- Now have domain knowledge :))
+
+#### Step 2. Write down _exactly_ what you just did by hand in the previous step
+
+- 1. I started with the image I wanted `inImage`
+- 2. Then, I made another image of the same size, which we called `outImage`
+- 3. I computed `(255+0+0) / 3 = 83`
+- 4. I made the first pixel of outImage `R=83, G=83, B=83`
+- 5. And then compute the average of the second pixel ...
+- 6. I made the second pixel of outImage ...
+- 7. ...
+
+#### Step 3. Find Patterns (Look for repetitions and patterns)
+
+- 1. I started with the image I wanted `inImage`
+- 2. I made a blank image of the same size `outImage`
+- 3. For each pixel in `outImage`:
+  - Look at the corresponding pixel in inImage - `inPixel`:
+  - Compute `inPixel's red` + `inPixel's green` + `inPixel's blue`
+  - Divide that sum by `3` (call it `average`)
+  - Set `outPixel's red` to `average`
+  - Set `outPixel's green` to `average`
+  - Set `outPixel's blue` to `average`
+- `outImage` is your answer!
+
+The last thing you should do before you write code is to test your generalized algorithm out on _another small input_ in step 4.
+
+#### Step 4. Test Algorithm
+
+_pass_
 
