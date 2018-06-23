@@ -48,12 +48,12 @@ Since these data files are quite large, we will also provide three small files w
 
 You will write a program with several methods and tester methods to test each method you write. You should start with understanding the methods shown in the video. Specifically you should write the following methods:
 
-- Modify the method __totalBirths__ (shown in the video for this project) to also:
+-(1) Modify the method __totalBirths__ (shown in the video for this project) to also:
   - `print the number of girls names` ,
   - `the number of boys names` and
   - `the total names in the file`.
 
-- Write the method named __getRank__ that:
+-(2) Write the method named __getRank__ that:
   - has three parameters:
     - an integer named year,
     - a string named name, and
@@ -64,10 +64,22 @@ You will write a program with several methods and tester methods to test each me
     - given the name `Mason`, the year `2012` and the gender `M`, the number returned is __2__, as Mason is the boys name with the second highest number of births.
     - Given the name Mason, the year `2012` and the gender `F`, the number returned is __-1__ as Mason does not appear with an F in that file.
 
-- Write the method named __getName__ that:
-  - has three parameters: an integer named year, an integer named rank, and a string named gender (F for female and M for male). This method returns the name of the person in the file at this rank, for the given gender, where rank 1 is the name with the largest number of births. If the rank does not exist in the file, then “NO NAME” is returned.
+-(3) Write the method named __getName__ that:
 
-- What would your name be if you were born in a different year? Write the void method named whatIsNameInYear that has four parameters: a string name, an integer named year representing the year that name was born, an integer named newYear and a string named gender (F for female and M for male). This method determines what name would have been named if they were born in a different year, based on the same popularity. That is, you should determine the rank of name in the year they were born, and then print the name born in newYear that is at the same rank and same gender. For example, using the files "yob2012short.csv" and "yob2014short.csv", notice that in 2012 Isabella is the third most popular girl's name. If Isabella was born in 2014 instead, she would have been named Sophia, the third most popular girl's name that year. The output might look like this:
+  - has three parameters:
+    - an integer named year,
+    - an integer named rank, and
+    - a string named gender (F for female and M for male).
+  -  This method returns the name of the person in the file at this rank, for the given gender, where rank 1 is the name with the largest number of births.
+  - If the rank does not exist in the file, then “NO NAME” is returned.
+
+-(4) What would your name be if you were born in a different year? Write the void method named __whatIsNameInYear__ that:
+  - has four parameters:
+    - a string name,
+    - an integer named year representing the year that name was born,
+    - an integer named newYear and
+    - a string named gender (F for female and M for male).
+  - This method determines what name would have been named if they were born in a different year, based on the same popularity. That is, you should determine the rank of name in the year they were born, and then print the name born in newYear that is at the same rank and same gender. For example, using the files "yob2012short.csv" and "yob2014short.csv", notice that in 2012 Isabella is the third most popular girl's name. If Isabella was born in 2014 instead, she would have been named Sophia, the third most popular girl's name that year. The output might look like this:
 
     ```text
     Isabella born in 2012 would be Sophia if she was born in 2014.

@@ -47,4 +47,6 @@ public class ParsingBirthsData {
         FileResource fr = new FileResource();
         totalBirths(fr);
     }
+
+         
 }
