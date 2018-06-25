@@ -7,6 +7,7 @@
  */
 import edu.duke.ImageResource;
 import edu.duke.Pixel;
+import java.io.*;
 
 public class GrayScaleConverter
 {
@@ -41,4 +42,14 @@ public class GrayScaleConverter
 	gray.draw();
     }
 
+	public void selectAndConvert()
+	{
+    	DirectorResource dr = new DirectoryResource();
+    	for (File f : dr.selectedFiles())
+    	{
+    	    ImageResource inImage = new ImageResource(f);
+    	    ImageResource gray = makeGray(inImage);
+    	    gray.draw();
+    	}
+	}
 }

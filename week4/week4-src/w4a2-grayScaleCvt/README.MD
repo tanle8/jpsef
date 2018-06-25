@@ -22,3 +22,14 @@ Here is another example. The second image below is the inverted image of the fir
 <img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/qJZb9GIrEeWc0w7793dlBw_d0d7273b7b3aedc4f5c8fe80b9bc5319_cat.png?expiry=1529884800000&hmac=X3_SZy2Fr8OX9Hpu2VYettRyk9ClmpPGrHbkbfAJPS8">
 
 <img src="https://d3c33hcgiwev3.cloudfront.net/imageAssetProxy.v1/smH9FWIrEeWc0w7793dlBw_a750e351c422636633b3839ee02b1088_catinv.png?expiry=1529884800000&hmac=WWSP3d3KXhXfT6LR3JDh4K-TSkWhWT5kebHeljisRXo">
+
+To tackle this problem:
+
+1. First think about how to create a new image that is the inverse of another image.
+2. Start by solving an example by hand, write down the steps, find patterns and then test the algorithm
+3. Then create a new BlueJ class called `BatchInversions`. In this class create a method named `makeInversion` that has one parameter, an image, and returns a new image that is the inverse of the original image.
+4. Then add another method called `selectAndConvert` to handle the batch processing of files. This method allows the user to select several files and display the images. Test this method to make sure it works.
+5. Then modify the `selectAndConvert` method to save each inverted image as a file with a new filename. Use the old filename and append to the front of it “inverted-”
+
+Link to FAQ page for this course: http://www.dukelearntoprogram.com/course2/faq.php
+
