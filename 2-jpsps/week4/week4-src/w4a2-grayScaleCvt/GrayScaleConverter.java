@@ -6,6 +6,7 @@
  * @version (23-06-2018)
  */
 import edu.duke.ImageResource;
+import edu.duke.DirectoryResource;
 import edu.duke.Pixel;
 import java.io.*;
 
