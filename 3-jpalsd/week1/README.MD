@@ -22,12 +22,14 @@ Specifically, you should do the following.
     - Be sure to call the method `isVowel` that you wrote and also test this method.
 
 - Write a method `emphasize` with:
-    - two parameters, a String named phrase and a character named ch.
-    - This method should return a String that is the string phrase but with the Char ch (upper- or lowercase) replaced by ‘*’ if it is in an odd number location in the string (e.g. the first character has an odd number location but an even index, it is at index 0), or ‘+’ if it is in an even number location in the string (e.g. the second character has an even number location but an odd index, it is at index 1).
+    - two parameters, a String named `phrase` and a character named `ch`.
+    - This method should return a String that is the string phrase but with the Char `ch` (upper- or lowercase) replaced by:
+        - '*' if it is in an __odd number location in the string__, (e.g. the first character has an odd number location but an even index, it is at index 0), or
+        - '+' if it is in an __even number location in the string__, (e.g. the second character has an even number location but an odd index, it is at index 1).
 
     - For example:
-        - the call `emphasize("dna ctgaaactga", 'a')` would return the string "dn* ctg+*+ctg+", and
-        - the call `emphasize("Mary Bella Abracadabra", 'a') would return the string "M+ry Bell+ +br*c*d*br+".
+        - the call `emphasize("dna ctgaaactga", 'a')` would return the string "`dn* ctg+*+ctg+`", and
+        - the call `emphasize("Mary Bella Abracadabra", 'a')` would return the string "`M+ry Bell+ +br*c*d*br+`".
 
     - Be sure to test this method.
 

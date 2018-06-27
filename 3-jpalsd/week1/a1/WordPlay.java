@@ -72,4 +72,53 @@ public class WordPlay {
             System.out.println(output + "\n" + testCase1);
         }
     }
+    
+    public String emphasize(String phrase, char ch)
+    {
+        int numLoc = 0;
+        int idx = 0;
+        Character.toLowerCase(ch);
+        StringBuilder newPhrase = new StringBuilder(phrase.toLowerCase());
+        
+        for (idx = 0; idx < phrase.length(); idx++)
+        {
+            numLoc = idx + 1;
+            Character idxChar = newPhrase.charAt(idx);
+            if (idxChar.equals(ch))
+            {
+                if (numLoc % 2 == 0)
+                {
+                    newPhrase.setCharAt(idx, '+');
+                }
+                else
+                {
+                    newPhrase.setCharAt(idx, '*');
+                }
+            }
+        }
+        
+        return newPhrase.toString();
+    }
+    
+    public void testEmphasize()
+    {
+        String input1 = "dna ctgaaactga";
+        String output1 = emphasize(input1, 'a');
+        String input2 = "Mary Bella Abracadabra";
+        String output2 = emphasize(input2, 'a');
+        String testCase1 = "dn* ctg+*+ctg+";
+        String testCase2 = "M+ry Bell+ +br*c*d*br+";
+        
+        if (output1.equals(testCase1.toLowerCase()) && output2.equals(testCase2.toLowerCase()))
+        {
+            System.out.println("Test case 1: pass" + "\n" + "Test case 2: pass");
+        }
+        else
+        {
+            System.out.println("Test case failed \n" 
+                                + input1 + "\t" + output1 + "\t" + testCase1);
+            System.out.println("Test case failed \n" 
+                                + input1 + "\t" + output1 + "\t" + testCase1);
+        }
+    }
 }
