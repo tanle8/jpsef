@@ -7,6 +7,7 @@
  * @version (27-06-2018)
  */
 
+import edu.duke.*;
 
 public class WordPlay {
     public boolean isVowel(char ch)
@@ -36,6 +37,39 @@ public class WordPlay {
         {
             System.out.println("Test case 1: failed -\t" + "Your algo not good yet! :P");
         }
+    }
+    
+    public String replaceVowels(String phrase, char ch)
+    {
+        Character.toLowerCase(ch);
+        StringBuilder newPhrase = new StringBuilder(phrase.toLowerCase());
         
+        for (int i = 0; i < newPhrase.length(); i++)
+        {
+            // Look at the ith character of pharase
+            char ithChar = newPhrase.charAt(i);
+            // Check vowel
+            if (isVowel(ithChar))
+            {
+                newPhrase.setCharAt(i, ch);
+            }
+        }
+        
+        return newPhrase.toString();
+    }
+    
+    public void testReplacedVowels()
+    {
+        String output = replaceVowels("Hello World", '*');
+        String testCase1 = "H*ll* W*rld";
+        if (output.equals(testCase1.toLowerCase()))
+        {
+            System.out.println("Test case 1: pass - \t" + "Hello World" + "\t" + testCase1);
+        }
+        else
+        {
+            System.out.println("Test case 1: failed - \t" + "Check your algo please");
+            System.out.println(output + "\n" + testCase1);
+        }
     }
 }

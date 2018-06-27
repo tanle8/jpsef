@@ -16,7 +16,9 @@ Specifically, you should do the following.
 
 - Write a method `replaceVowels` that:
     - has two parameters, a String named phrase and a Char named ch.
-    - This method should return a String that is the string phrase with all the vowels (uppercase or lowercase) replaced by ch. For example, the call replaceVowels(“Hello World”, ‘*’) returns the string “H*ll* W*rld”. 
+    - This method should return a String that is the string phrase with all the vowels (uppercase or lowercase) replaced by ch.
+    - For example:
+        - the call `replaceVowels("Hello World", '*')` returns the string "`H*ll* W*rld`".
     - Be sure to call the method `isVowel` that you wrote and also test this method.
 
 - Write a method `emphasize` with:

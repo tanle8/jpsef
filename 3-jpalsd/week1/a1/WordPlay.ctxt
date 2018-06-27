@@ -1,8 +1,11 @@
 #BlueJ class context
 comment0.target=WordPlay
-comment0.text=\n\ This\ program\ transforms\ words\ from\ a\ file\ into\ another\ form,\n\ such\ as\ replacing\ vowels\ with\ an\ asterix\n\ \n\ @author\ (Tan\ Le)\ \n\ @version\ (27-06-2018)\n
 comment1.params=ch
 comment1.target=boolean\ isVowel(char)
 comment2.params=
 comment2.target=void\ testIsVowel()
-numComments=3
+comment3.params=phrase\ ch
+comment3.target=java.lang.String\ replaceVowels(java.lang.String,\ char)
+comment4.params=
+comment4.target=void\ testReplacedVowels()
+numComments=5
