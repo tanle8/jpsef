@@ -48,8 +48,3 @@ Specifically, you should do the following:
     - Be sure to test this method.
 
 Link to FAQ page for this course: http://www.dukelearntoprogram.com/course3/faq.php
-
-
-0627_14_bacgiang2_1
-
-mmdddmd
