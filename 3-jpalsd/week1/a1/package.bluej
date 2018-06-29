@@ -1,3 +1,33 @@
 #BlueJ package file
-#Wed Jun 27 09:41:54 ICT 2018
+editor.fx.0.height=977
+editor.fx.0.width=720
+editor.fx.0.x=1200
+editor.fx.0.y=63
+objectbench.height=66
+objectbench.width=696
+package.divider.horizontal=0.6
+package.divider.vertical=0.7170542635658915
+package.editor.height=178
+package.editor.width=590
+package.editor.x=473
+package.editor.y=653
+package.frame.height=360
+package.frame.width=720
+package.numDependencies=0
+package.numTargets=1
+package.showExtends=true
+package.showUses=true
 project.charset=UTF-8
+readme.height=58
+readme.name=@README
+readme.width=47
+readme.x=10
+readme.y=10
+target1.height=50
+target1.name=WordPlay
+target1.showInterface=false
+target1.type=ClassTarget
+target1.typeParameters=
+target1.width=90
+target1.x=90
+target1.y=20
