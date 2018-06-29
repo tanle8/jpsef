@@ -50,7 +50,7 @@ public class CaesarCipher
 
     public void testEncrypt()
     {
-        int key = 17;
+        int key = 15;
         FileResource fr = new FileResource();
         String message = fr.asString();
         // Print out the String before encrypting
@@ -123,7 +123,8 @@ public class CaesarCipher
     {
         String result = encryptTwoKeys("First Legion", 23, 17);
         String testCase1 = "Czojq Ivdzle";
-        
+        String resultQuiz = encryptTwoKeys("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!", 8, 21);
+                
         if(result.equals(testCase1))
         {
             System.out.println("Test case 1: pass \n\t"+ result + "\n\t" + testCase1);
@@ -132,5 +133,7 @@ public class CaesarCipher
         {
             System.out.println("Test case 1: failed. It's failed! \n\t" + result + "\n\t" + testCase1);
         }
+        
+        System.out.println(resultQuiz);
     }
 }
