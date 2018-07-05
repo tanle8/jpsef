@@ -45,5 +45,31 @@ public class WordLengths {
         {
             System.out.println(result[i] + " words of length " + (i + 1) + ": " );
         }
+        // Using method indexOfMax() to find most common word length
+        int mostCommonWordLen = indexOfMax(result);
+        System.out.println("The most common word length is: " + mostCommonWordLen);
+    }
+    
+    public int indexOfMax(int[] values)
+    {
+        int valueMax = 0;
+        int position = 0;
+        for (int i = 0; i < values.length; i++)
+        {
+            // In the beginning, valueMax = 0
+            if (valueMax == 0)
+            {
+                valueMax = values[i];
+            }
+            else
+            {
+                if (valueMax < values[i])
+                {
+                    valueMax = values[i];
+                    position = i;
+                }
+            }
+        }
+        return position+1;  // Because the index of array starts from 0.
     }
 }

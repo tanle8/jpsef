@@ -82,8 +82,8 @@ You should start by
 
 Idea for two keys decrypt method. Recall that in using two keys, `key1` and `key2`,
 
-- key1 was used to encrypt every other character, starting with the first, of the String, and
-- key2 was used to encrypt every other character, starting with the second.
+- `key1` was used to encrypt every other character, starting with the first, of the String, and
+- `key2` was used to encrypt every other character, starting with the second.
 
 In order to __decrypt__ the encrypted String, it may be easier to split the String into _two_ Strings,
 
