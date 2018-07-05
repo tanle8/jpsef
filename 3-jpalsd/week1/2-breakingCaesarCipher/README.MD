@@ -1,4 +1,4 @@
-# Week 1 - Breaking the Caesar Cipher
+    # Week 1 - Breaking the Caesar Cipher
 
 Before attempting these assignments, you should type in, compile, and understand the example programs from the lesson, including:
 
@@ -12,7 +12,7 @@ You will write a program to figure out the most common word length of words from
 
 To solve this problem you will need:
 
-- to keep track of how many words from a file are of each possible length.
+- To keep track of how many words from a file are of each possible length.
 - You should group all words of length `30` or more together, and you should not count basic punctuation that are the first or last characters of a group of characters.
 
 Specifically, you should do the following:
@@ -20,7 +20,9 @@ Specifically, you should do the following:
 - Create a new class called `WordLengths`.
 - Write a void method `countWordLengths` that:
 
-    - has two parameters, a FileResource named `resource` and an integer array named `counts`.
+    - has two parameters:
+        - a FileResource named `resource` and
+        - an integer array named `counts`.
     - This method should:
         - read in the words from resource and
         - count the number of words of each length for all the words in resource,
@@ -29,8 +31,10 @@ Specifically, you should do the following:
     - For example, after this method executes, counts[k] should contain the number of words of length k.
 
     - If a word has a _non-letter_ as the first or last character, it should not be counted as part of the word length. For example:
-    - the word "__And__", would be considered of length 3 (the comma is not counted),
-    - the word "__blue-jeans__" would be considered of length 10 (the double quotes are not counted, but the hyphen is).
+
+        - the word "__And__", would be considered of length 3 (the comma is not counted),
+        - the word "__blue-jeans__" would be considered of length 10 (the double quotes are not counted, but the hyphen is).
+
     - Note that we will miscount some words, such as "__Hello,__" which will be counted as 6 since we don’t count the double quotes but will count the comma, but that is OK as there should not be many words in that category.
 
     - For any words equal to or larger than the `last index` of the counts array, count them as the largest size represented in the counts array.
@@ -39,7 +43,7 @@ Specifically, you should do the following:
 
 - Write a void method `testCountWordLengths` that:
 
-    - creates a FileResource so you can select a file, and creates a counts integer array of size 31.
+    - creates a FileResource so you can select a file, and creates a counts _integer_ array of size 31.
     - This method should call `countWordLengths` with a file and then print the number of words of each length.
     - Test it on the small file `smallHamlet.txt` shown below.
 
@@ -73,7 +77,7 @@ Note this file has words that are:
 
 You should start by
 
-- Writing the decryption method explained in the lesson that decrypts a message that was encrypted with one key, using statistical letter frequencies of English text.
+- Writing the `decryption` method explained in the lesson that decrypts a message that was encrypted with one key, using statistical letter frequencies of English text.
 - Then you will add code to be able to decrypt a message that was encrypted with two keys, using ideas from the single key decryption method and the encryption with two keys method from the program you wrote in the last lesson.
 
 Idea for two keys decrypt method. Recall that in using two keys, `key1` and `key2`,
@@ -84,7 +88,7 @@ Idea for two keys decrypt method. Recall that in using two keys, `key1` and `key
 In order to __decrypt__ the encrypted String, it may be easier to split the String into _two_ Strings,
 
 - one String of all the letters encrypted with `key1` and one String of all the letters encrypted with `key2`. Then use the algorithm from the lesson to determine the key for each String, and then use those keys and the two key encryption method to decrypt the original encrypted message. For example:
-- if the encrypted message was "Qbkm Zgis", then you would split this String into two Strings:
+- if the encrypted message was "Qbkm Zgis", then you would split this String into _two_ Strings:
 - "Qk gs", representing the characters in the odd number positions and
 - "bmZi" representing the characters in the even number positions.
 - Then you would get the key for each half String and use the two key encryption method to find the message. Note this example is so small it likely won’t find the keys, but it illustrates how to take the Strings apart.
