@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=CaesarBreaker
+comment1.params=encrypted
+comment1.target=int[]\ countLetters(java.lang.String)
+comment2.params=frequencies
+comment2.target=int\ maxIndex(int[])
+comment3.params=encrypted
+comment3.target=java.lang.String\ decrypt(java.lang.String)
+comment4.params=message\ start
+comment4.target=java.lang.String\ halfOfString(java.lang.String,\ int)
+comment4.text=\n\ This\ method\ returns\ a\ new\ String\ that\ is\ every\ other\ \n\ character\ from\ message\ starting\ with\ the\ start\ position.\n\ \n\ @Params\:\n\ -\ message\:\ A\ String\n\ -\ start\:\ indicate\ the\ starting\ position\ in\ the\ message\ string\n\ @Returns\:\n\ -\ A\ string\ which\ depends\ on\ starting\ position\n
+comment5.params=
+comment5.target=void\ testHalfOfString()
+comment6.params=s
+comment6.target=int\ getKey(java.lang.String)
+comment7.params=s
+comment7.target=java.lang.String\ decryptTwoKeys(java.lang.String)
+comment8.params=
+comment8.target=void\ testDecryptTwoKeys()
+numComments=9
