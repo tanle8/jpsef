@@ -31,12 +31,24 @@ public class CaesarBreaker {
         int maxValueIdx = 0;
         for (int i = 0; i < frequencies.length; i++)
         {
+            System.out.println(frequencies[i] + "\t");
             if (frequencies[i] > frequencies[maxValueIdx])
             {
                 maxValueIdx = i;
             }
-        }
+        }   
         return maxValueIdx;
+    }
+    
+    public void testMaxIndex()
+    {
+        FileResource fr = new FileResource();
+        String message = fr.asString();
+        
+        int[] letterCounts = countLetters(message);
+        int maxValueIdx = maxIndex(letterCounts);
+              
+        System.out.println(maxValueIdx);
     }
     
     public String decrypt(String encrypted)
@@ -53,11 +65,6 @@ public class CaesarBreaker {
         
         return decrypted;
     }
-    
-    //public void testDecrypt()
-    //{
-        //TODO: Find a encrypted String to test the decypted method
-    //}
     
     /**
      * This method returns a new String that is every other 
