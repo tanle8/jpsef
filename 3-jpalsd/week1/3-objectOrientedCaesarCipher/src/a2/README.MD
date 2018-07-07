@@ -9,7 +9,7 @@ In addition you will create a second class, `TestCaesarCipherTwo` to test exampl
 
 - writing a method that will automatically decrypt an encrypted file by determining the two keys that were used to encrypt it.
 
-Specifically, you should do the following.
+Specifically, you should do the following:
 
 Create the `CaesarCipherTwo` class with the following parts:
 

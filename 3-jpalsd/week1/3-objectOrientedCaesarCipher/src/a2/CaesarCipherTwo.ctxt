@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=CaesarCipherTwo
+comment0.text=\n\ Put\ together\ the\ CaesarCipherTwo\ class\ that\n\ encrypts\ a\ message\ with\ two\ keys\n\ (the\ same\ way\ as\ the\ previous\ lesson)\n\ \n\ @author\ (Tan\ Le)\ \n\ @version\ (07-07-2018)\n
+comment1.params=key1\ key2
+comment1.target=CaesarCipherTwo(int,\ int)
+numComments=2
