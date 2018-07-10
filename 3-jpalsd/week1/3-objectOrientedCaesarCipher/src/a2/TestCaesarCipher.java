@@ -1,9 +1,9 @@
 
 /**
- * Write a description of TestCaesarCipher here.
+ * TestCaesarCipher includes the methods: halfOfString, countLetters, maxIndex
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Tan Le) 
+ * @version (09-07-2018)
  */
 public class TestCaesarCipher {
 
