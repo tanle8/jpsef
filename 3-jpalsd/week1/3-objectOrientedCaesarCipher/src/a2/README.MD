@@ -21,8 +21,23 @@ Create the `CaesarCipherTwo` class with the following parts:
 Create the `TestCaesarCipherTwo` class with the following parts:
 
 - Include the methods `halfOfString`, `countLetters`, and `maxIndex` that you wrote in the previous lesson.
-- Write the void method `simpleTests` that has no parameters. This method should read in a file as a String, create a `CaesarCipherTwo` object with keys 17 and 3, encrypt the String using the `CaesarCipherTwo` object, print the encrypted String, and decrypt the encrypted String using the `decrypt` method.
-- Write the method `breakCaesarCipher` that has one String parameter named input. This method should figure out which keys were used to encrypt this message (in a similar manner as before), then create a `CaesarCipherTwo` object with that key and decrypt the message.
-- In the `simpleTests` method, add a call to `breakCaesarCipher` on the encrypted String to decrypt it automatically by determining the keys, and then print the decrypted String.
+
+- Write the void method `simpleTests` that has no parameters. This method should:
+
+    - read in a file as a String,
+    - create a `CaesarCipherTwo` object with keys 17 and 3,
+    - encrypt the String using the `CaesarCipherTwo` object,
+    - print the encrypted String, and
+    - decrypt the encrypted String using the `decrypt` method.
+
+- Write the method `breakCaesarCipher` that:
+    - has one String parameter named `input`.
+    - This method should:
+        - figure out which keys were used to encrypt this message (in a similar manner as before), 
+        - then create a `CaesarCipherTwo` object with that key and decrypt the message.
+
+- In the `simpleTests` method:
+    - add a call to `breakCaesarCipher` on the encrypted String to decrypt it automatically by determining the keys, and
+    - then print the decrypted String.
 
 Link to FAQ page for this course: http://www.dukelearntoprogram.com/course3/faq.php

@@ -7,6 +7,8 @@
  * @author (Tan Le) 
  * @version (07-07-2018)
  */
+import edu.duke.*;
+
 public class CaesarCipherTwo {
     // Create the class's private fields
     private String alphabet;
@@ -67,5 +69,10 @@ public class CaesarCipherTwo {
      * @param input the encrypted message
      * @return decrypted the original message before encrypting
      */
-    
+    public String decrypt(String input)
+    {
+        CaesarCipherTwo cc = new CaesarCipherTwo(26 - mainKey2, 26 - mainKey1);
+        return cc.encrypt(input);
+
+    }
 }

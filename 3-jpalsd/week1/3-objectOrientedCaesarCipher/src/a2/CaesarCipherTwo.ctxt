@@ -1,6 +1,11 @@
 #BlueJ class context
 comment0.target=CaesarCipherTwo
-comment0.text=\n\ Put\ together\ the\ CaesarCipherTwo\ class\ that\n\ encrypts\ a\ message\ with\ two\ keys\n\ (the\ same\ way\ as\ the\ previous\ lesson)\n\ \n\ @author\ (Tan\ Le)\ \n\ @version\ (07-07-2018)\n
 comment1.params=key1\ key2
 comment1.target=CaesarCipherTwo(int,\ int)
-numComments=2
+comment2.params=input
+comment2.target=java.lang.String\ encrypt(java.lang.String)
+comment2.text=\n\ This\ method\ returns\ a\ String\ that\ is\ the\ input\ encrypted\ using\n\ the\ two\ shifted\ alphabets\ \n\ @param\ input\ the\ message\ we\ want\ to\ encrypt\n\ @return\ encrypted\ the\ encrypted\ message\ from\n\ the\ input\ message\n
+comment3.params=input
+comment3.target=java.lang.String\ decrypt(java.lang.String)
+comment3.text=\n\ This\ method\ decrypts\ a\ input\ encrypted\ message\ and\ return\ the\ \n\ original\ message\n\ @param\ input\ the\ encrypted\ message\n\ @return\ decrypted\ the\ original\ message\ before\ encrypting\n
+numComments=4
