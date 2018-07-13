@@ -49,9 +49,31 @@ public class WordFrequencies {
         }
     }
 
+    /**
+     * This method returns an int that is the index location of the largest value in `myFreqs`.
+     * If there is a tie, then return the first such value.
+     */
+    public int findIndexOfMax()
+    {
+        int idxOfMax = 0;
+        int largestSoFar = myFreqs.get(idxOfMax);
+        for (int i = 0; i < myFreqs.size(); i++)
+        {
+            int currentFreq = myFreqs.get(i);
+            if (currentFreq > largestSoFar)
+            {
+                idxOfMax = i;
+                largestSoFar = currentFreq;
+            }
+        }
+
+        return idxOfMax;
+    }
+
+
     public void tester()
     {
-        // Call findUnique
+        // 1. findUnique tester
         findUnique();
         // Print the number of unique words
         System.out.println("The number of unique words: " + myWords.size());
@@ -60,5 +82,13 @@ public class WordFrequencies {
         {
             System.out.println(myFreqs.get(i) + "\t" + myWords.get(i));
         }
+
+        // 2. findIndexOfMax tester
+        int idxMax = findIndexOfMax();
+        
+        String mostOftenWord = myWords.get(idxMax);
+        int mostOftenWordFreq = myFreqs.get(idxMax);
+        
+        System.out.println("The word that occurs most often and its count are: " + mostOftenWord + "\t" + mostOftenWordFreq);
     }
 }
