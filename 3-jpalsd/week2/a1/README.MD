@@ -10,12 +10,13 @@ Specifically, you should do the following:
     - one is called `myFreqs` and should be an ArrayList of type Integer. The kth position in `myFreqs` should represent the number of times the kth word in `myWords` occurs in the file.
 - Write a constructor `WordFrequencies`, and initialize the private variables.
 - Write a void method `findUnique` that has no parameters.
-    - This method should first clear both `myWords` and `myFreqs`, using the __.clear()__ method. 
+    - This method should first clear both `myWords` and `myFreqs`, using the __.clear()__ method.
     - Then it selects a file and then iterates over every word in the file, putting the unique words found into `myWords`.
     - For each word in the kth position of `myWords`, it puts the count of how many times that word occurs from the selected file into the kth position of `myFreqs`, as was demonstrated in the lesson.
 - Write a void `tester` method that has no parameters.
     - This method should call `findUnique`.
-    - Then print out the number of unique words, and for each unique word, print the frequency of each word and the word, as was demonstrated in the lesson.
+    - Then print out the number of unique words, and
+    - for each unique word, print the frequency of each word and the word, as was demonstrated in the lesson.
 - Write the method `findIndexOfMax` that has no parameters.
     - This method returns an int that is the index location of the largest value in `myFreqs`.
     - If there is a tie, then return the first such value.
