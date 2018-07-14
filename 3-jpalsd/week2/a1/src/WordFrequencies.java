@@ -89,6 +89,7 @@ public class WordFrequencies {
         String mostOftenWord = myWords.get(idxMax);
         int mostOftenWordFreq = myFreqs.get(idxMax);
         
-        System.out.println("The word that occurs most often and its count are: " + mostOftenWord + "\t" + mostOftenWordFreq);
+        System.out.println("The word that occurs most often and its count are: \
+                            " + mostOftenWord + "\t" + mostOftenWordFreq);
     }
 }
