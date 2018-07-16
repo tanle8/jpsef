@@ -7,6 +7,7 @@
  * @version (a version number or a date)
  */
 import java.util.ArrayList;
+import edu.duke.FileResource;
 
 public class CharactersInPlay {
     private ArrayList<String> charNames;
@@ -66,7 +67,7 @@ public class CharactersInPlay {
         // For each line
         for (String line : resource.lines())
         {
-            if (line.indexOf('.'))
+            if (line.indexOf('.') != -1)
             {
                 update(getCharacter(line));
             }
@@ -127,10 +128,9 @@ public class CharactersInPlay {
         // Get main character's speking count
         int mainCharacterParts = charNamesFreqs.get(mainCharacterIdx);
         // Print out the name of main character and number of speaking parts
-        System.out.println("The main character is: " + mainCharacterName \
-                            + " with number of speaking parts: " + mainCharacterParts);
+        System.out.println("The main character is  " + mainCharacterName + "  with number of speaking parts is  " + mainCharacterParts);
         // Test charactersWithNumParts
-        System.out.println("3. charactersWithNumParts testing: \n");
-        charactersWithNumParts(55, 150);
+        System.out.println("3. Testing charactersWithNumParts: \n");
+        charactersWithNumParts(10, 15);
     }
 }
