@@ -112,4 +112,21 @@
 
 - Program documentation should include information on how to modify code
 
-    
+## Extending Programs and Classes
+
+- Modifying `GladLib.java` to add a new label, like <verb>: making modifications in many parts of class, following naming convention
+
+    - Must create new instance variable
+    - Must construct/initialize
+    - Must access for random replacement
+
+- Follow conventions
+
+    - verbList for verb
+
+- Good design or good judgment comes from experience
+
+    - Experience comes from bad judgment!
+
+- Software can be brittle
+- Open/Closed: open for extension, closed for modification
