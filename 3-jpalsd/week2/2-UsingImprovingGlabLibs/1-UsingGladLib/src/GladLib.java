@@ -12,7 +12,9 @@ public class GladLib {
 	private ArrayList<String> verbList;
 	private ArrayList<String> fruitList;
 	private ArrayList<String> usedWordsList;
-	
+    
+    private int numReplacedWord;
+    
 	private Random myRandom;
 	
 	private static String dataSourceURL = "http://dukelearntoprogram.com/course3/data";
@@ -38,12 +40,31 @@ public class GladLib {
 		animalList    = readIt(source+"/animal.txt");
 		timeList      = readIt(source+"/timeframe.txt");		
 		fruitList     = readIt(source+"/fruit.txt");		
-		usedWordsList = new ArrayList<String>();		
+        usedWordsList = new ArrayList<String>();		
+        numReplacedWord = 0;    // Initialize 
 	}
 	
 	private String randomFrom(ArrayList<String> source){
-		int index = myRandom.nextInt(source.size());
-		return source.get(index);
+        
+        String randmWord;   // return string
+
+        while(true)
+        {
+            int index = myRandom.nextInt(source.size());
+            // Find the word in list source using index
+            randmWord = source.get(index);
+            // If that word is not in usedWordsList, 
+            int usedWordIdx = usedWordsList.indexOf(randmWord);
+            if (usedWordIdx == -1){
+                break;      // Get out of the loop
+            } else {
+                continue;
+            }
+        }
+        usedWordsList.add(randmWord);   // Add just used word to ArrayList usedWordsList
+        numReplacedWord++;              // Increase replaced word count by one
+        
+		return randmWord;
 	}
 	
 	private String getSubstitute(String label) {
@@ -117,7 +138,10 @@ public class GladLib {
 			for(String word : resource.words()){
 				story = story + processWord(word) + " ";
 			}
-		}
+        }
+        // Clear the used word list after each opened document
+        usedWordsList.clear();
+
 		return story;
 	}
 	
@@ -141,7 +165,9 @@ public class GladLib {
 	public void makeStory(){
 	    System.out.println("\n");
 		String story = fromTemplate("../data/data/madtemplate2.txt");
-		printOut(story, 60);
+        printOut(story, 60);
+        System.out.println("\nThe total number of words that were replaced: "+numReplacedWord);
+        numReplacedWord = 0;    // reset the counter after each opened document
 	}
 
 }
