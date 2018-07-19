@@ -368,8 +368,8 @@ public class WordFrequenciesMap {
 
 - Collection of `(key, value)` pairs, with keys mapping to values
     - Both are objects, so `Integer` rather than `int`
-     - Key best as immutable type, like String or Integer
-     - Value can be anything, ArrayList, String, Integer
+    - Key best as immutable type, like String or Integer
+    - Value can be anything, ArrayList, String, Integer
 - Accessible via import `java.util.HashMap`
 - Methods: `put()`, `size()`, `get()`, `keySet()`, `containsKey()`
 - Examine elements with iterable over keyset, cannot access via index.
