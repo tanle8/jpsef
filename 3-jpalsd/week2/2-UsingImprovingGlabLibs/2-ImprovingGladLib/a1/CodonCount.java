@@ -98,18 +98,18 @@ public class CodonCount {
         cc.buildCodonMap(0, dna);
 		System.out.println("Number of unique codons:\t" + cc.getCodonCount());
 		System.out.println(cc.getMostCommonCodon());
-        cc.printCodonCounts(7, 7);
+        cc.printCodonCounts(1, 5);
         
         // Started from index 1
         cc.buildCodonMap(1, dna);
 		System.out.println("Number of unique codons:\t" + cc.getCodonCount());
 		System.out.println(cc.getMostCommonCodon());
-        cc.printCodonCounts(7, 7);
+        cc.printCodonCounts(1, 5);
         
         // Started from index 2
         cc.buildCodonMap(2, dna);
 		System.out.println("Number of unique codons:\t" + cc.getCodonCount());
 		System.out.println(cc.getMostCommonCodon());
-        cc.printCodonCounts(7, 7);
+        cc.printCodonCounts(1, 5);
     }
 }
