@@ -15,7 +15,7 @@ public class LogAnalyzer
 
     public LogAnalyzer() {
         // complete constructor
-        records = new ArrayList<>();
+        records = new ArrayList<LogEntry>();
     }
 
     public void readFile(String filename) {
