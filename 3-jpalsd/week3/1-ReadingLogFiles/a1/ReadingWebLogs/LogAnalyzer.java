@@ -49,4 +49,15 @@ public class LogAnalyzer
         // return the size of uniqueIPs
         return uniqueIPs.size();
     }
+
+    public void printAllHigherThanNum(int num){
+        // for each web log entries in records
+        for (LogEntry le : records){
+            // find the status code greater than num
+            if (le.getStatusCode() > num){
+                // print the LogEntry that has a status code greater than num
+                System.out.println(le.toString());
+            }
+        }
+    }
 }

@@ -8,4 +8,6 @@ comment3.params=
 comment3.target=void\ printAll()
 comment4.params=
 comment4.target=int\ countUniqueIPs()
-numComments=5
+comment5.params=num
+comment5.target=void\ printAllHigherThanNum(int)
+numComments=6

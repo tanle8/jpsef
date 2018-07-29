@@ -30,4 +30,11 @@ public class Tester
         la.readFile("short-test_log");
         System.out.println("Number of unique IPs: " + la.countUniqueIPs());
     }
+
+    public void testPrintAllHigherThanNum(){
+        // create a LogAnalyzer object
+        LogAnalyzer la = new LogAnalyzer();
+        la.readFile("short-test_log");
+        la.printAllHigherThanNum(100);
+    }
 }
