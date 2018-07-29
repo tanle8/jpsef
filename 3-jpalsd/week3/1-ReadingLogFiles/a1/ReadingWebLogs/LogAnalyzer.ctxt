@@ -6,4 +6,6 @@ comment2.params=filename
 comment2.target=void\ readFile(java.lang.String)
 comment3.params=
 comment3.target=void\ printAll()
-numComments=4
+comment4.params=
+comment4.target=int\ countUniqueIPs()
+numComments=5

@@ -1,7 +1,6 @@
 # Assignment: Reading Web Logs
 
 In this assignment you will complete the program to read and print web logs that was described in the lesson.
-
 You will start with the files provided, which include:
 
 - The class __LogEntry__ from the lesson that has:

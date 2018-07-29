@@ -60,7 +60,9 @@ Specifically, you should do the following:
     - For help, refer to the lectures in this lesson on the unique IP algorithm and code.
 
 - In the `Tester` class (or you can write a new class for testing) write the void method `testUniqueIP` that has no parameters.
-    - This method should create a LogAnalyzer, read from the file `short-test_log`, and then test the method `countUniqueIPs`.
+    - This method should create a LogAnalyzer,
+    - read from the file `short-test_log`, and
+    - then test the method `countUniqueIPs`.
 
 - In the `LogAnalyzer` class,
     - write the void method `printAllHigherThanNum` that:
@@ -82,3 +84,4 @@ Specifically, you should do the following:
             - The call `countUniqueIPsInRange(300, 399)` returns 2. In this case, note that there are three entries in the file that have a status code in the 300 range, but two of them have the same IP address.
 
 Link to FAQ page for this course: http://www.dukelearntoprogram.com/course3/faq.php
+
