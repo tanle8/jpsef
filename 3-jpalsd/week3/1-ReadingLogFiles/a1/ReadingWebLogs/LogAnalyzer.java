@@ -70,13 +70,9 @@ public class LogAnalyzer
      *                           that has access on the given day
      */
     public ArrayList<String> uniqueIPVisitsOnDay(String someday){
-        // Create an empty list to store unique IPs on a day
         ArrayList<String> uniqueIPsOnDay = new ArrayList<String>();
-        // For each element le (LogEntry object) in records
         for(LogEntry le : records){
-            // Look at it date
             String accessTime = le.getAccessTime().toString();
-            // If this is the day
             if (accessTime.contains(someday)){
                 String ipAddr = le.getIpAddress();
                 if (!uniqueIPsOnDay.contains(ipAddr)){
@@ -85,8 +81,31 @@ public class LogAnalyzer
                 }
             }
         }
-        System.out.println(uniqueIPsOnDay.size());
+        System.out.println(uniqueIPsOnDay.size());  // For testing
 
         return uniqueIPsOnDay;
+    }
+
+    /**
+     * This method returns the number of unique IP addresses in `records` that have
+     * a status code in the range from `low` to `high`.
+     * @param low 
+     * @param high
+     * @return number of unique IP addresses that have status code in the range from
+     * `low` to `high`
+     */
+    public int countUniqueIPsInRange(int low, int high){
+        ArrayList<String> uniqueIPsInRange = new ArrayList<String>();
+        for (LogEntry le : records){
+            int statusCode = le.getStatusCode();
+            if (low <= statusCode && statusCode <= high){
+                String ipAddr = le.getIpAddress();
+                if (!uniqueIPsInRange.contains(ipAddr)){
+                    uniqueIPsInRange.add(ipAddr);
+                }
+            }
+        }
+        
+        return uniqueIPsInRange.size();
     }
 }

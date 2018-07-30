@@ -8,6 +8,8 @@
 
 import java.util.*;
 
+import sun.rmi.runtime.Log;
+
 public class Tester
 {
     public void testLogEntry() {
@@ -44,5 +46,12 @@ public class Tester
         la.readFile("weblog-short_log");
         la.uniqueIPVisitsOnDay("Sep 14");
         la.uniqueIPVisitsOnDay("Sep 30");
+    }
+
+    public void testCountUniqueIPsInRange(){
+        LogAnalyzer la = new LogAnalyzer();
+        la.readFile("short-test_log");
+        System.out.println(la.countUniqueIPsInRange(200, 299));
+        System.out.println(la.countUniqueIPsInRange(300, 399));
     }
 }
