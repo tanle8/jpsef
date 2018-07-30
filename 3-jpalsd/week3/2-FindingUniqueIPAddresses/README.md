@@ -74,14 +74,22 @@ Specifically, you should do the following:
 - In the `LogAnalyzer` class,
     - write the method `uniqueIPVisitsOnDay` that has one String parameter named `someday` in the format "MMM DD" where:
         - `MMM` is the first three characters of the month name with the first letter capitalized and the others in lowercase, and
-        - `DD` is the day in two digits (examples are "Dec 05" and "Apr 22").
-    - This method accesses the web logs in records and returns an ArrayList of Strings of unique IP addresses that had access on the given day. (Note that the dates in LogEntrys are stored as a Date object, but using `toString` will allow you to access the characters in the Date. For example, consider that `d` is a Date. __String str = d.toString()__; allows you to now use a String representation of the date.) Be sure to test your program with code in the `Tester` class. Using the file `weblog-short_log` you should see that the call to `uniqueIPVisitsOnDay("Sep 14")` returns an ArrayList of 2 items and `uniqueIPVisitsOnDay("Sep 30")` returns an ArrayList of 3 items.
-    - In the `LogAnalyzer` class, write the method `countUniqueIPsInRange` that:
-        - has two integer parameters named `low` and `high`.
-        - This method returns the number of unique IP addresses in `records` that have a status code in the range from `low` to `high`, inclusive.
-        - Be sure to test your program on several ranges. For example, using the file `short-test_log`,
-            - The call `countUniqueIPsInRange(200, 299)` returns 4, as there are four unique IP addresses that have a status code from 200 to 299.
-            - The call `countUniqueIPsInRange(300, 399)` returns 2. In this case, note that there are three entries in the file that have a status code in the 300 range, but two of them have the same IP address.
+        - `DD` is the day in two digits (examples are "Dec 05" and "Apr 22")
+    - This method
+        - accesses the web logs in records and
+        - returns an ArrayList of Strings of unique IP addresses that had access on the given day.
+        - (Note that the dates in LogEntrys are stored as a Date object, but using `toString` will allow you to access the characters in the Date.
+            - For example, consider that `d` is a Date. `String str = d.toString();` allows you to now use a String representation of the date.)
+    - Be sure to test your program with code in the `Tester` class. Using the file `weblog-short_log` you should see that the call to
+        - `uniqueIPVisitsOnDay("Sep 14")` returns an ArrayList of 2 items and
+        - `uniqueIPVisitsOnDay("Sep 30")` returns an ArrayList of 3 items.
+
+- In the `LogAnalyzer` class, write the method `countUniqueIPsInRange` that:
+    - has two integer parameters named `low` and `high`.
+    - This method returns the number of unique IP addresses in `records` that have a status code in the range from `low` to `high`, inclusive.
+    - Be sure to test your program on several ranges. For example, using the file `short-test_log`,
+        - The call `countUniqueIPsInRange(200, 299)` returns 4, as there are four unique IP addresses that have a status code from 200 to 299.
+        - The call `countUniqueIPsInRange(300, 399)` returns 2. In this case, note that there are three entries in the file that have a status code in the 300 range, but two of them have the same IP address.
 
 Link to FAQ page for this course: http://www.dukelearntoprogram.com/course3/faq.php
 

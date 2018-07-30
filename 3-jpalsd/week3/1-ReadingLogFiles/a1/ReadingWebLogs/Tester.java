@@ -35,6 +35,14 @@ public class Tester
         // create a LogAnalyzer object
         LogAnalyzer la = new LogAnalyzer();
         la.readFile("short-test_log");
-        la.printAllHigherThanNum(100);
+        la.printAllHigherThanNum(200);
+    }
+    
+    public void testUniqueIPVisitsOnDay(){
+        // create a LogAnalyzer object
+        LogAnalyzer la = new LogAnalyzer();
+        la.readFile("weblog-short_log");
+        la.uniqueIPVisitsOnDay("Sep 14");
+        la.uniqueIPVisitsOnDay("Sep 30");
     }
 }

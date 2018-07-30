@@ -60,4 +60,33 @@ public class LogAnalyzer
             }
         }
     }
+
+    /**
+     * This method accesses the web logs in records and returns an ArrayList 
+     * of Strings of unique IP addresses that had access on the given day.
+     * 
+     * @param String someday the date in format "MMM DD" 
+     * @return ArrayList<String> the list of unique IP addresses
+     *                           that has access on the given day
+     */
+    public ArrayList<String> uniqueIPVisitsOnDay(String someday){
+        // Create an empty list to store unique IPs on a day
+        ArrayList<String> uniqueIPsOnDay = new ArrayList<String>();
+        // For each element le (LogEntry object) in records
+        for(LogEntry le : records){
+            // Look at it date
+            String accessTime = le.getAccessTime().toString();
+            // If this is the day
+            if (accessTime.contains(someday)){
+                String ipAddr = le.getIpAddress();
+                if (!uniqueIPsOnDay.contains(ipAddr)){
+                    // add ipAddr to uniqueIPsOnDay
+                    uniqueIPsOnDay.add(ipAddr);
+                }
+            }
+        }
+        System.out.println(uniqueIPsOnDay.size());
+
+        return uniqueIPsOnDay;
+    }
 }
