@@ -36,22 +36,23 @@ public class Tester
     public void testPrintAllHigherThanNum(){
         // create a LogAnalyzer object
         LogAnalyzer la = new LogAnalyzer();
-        la.readFile("short-test_log");
-        la.printAllHigherThanNum(200);
+        la.readFile("weblog1_log");
+        la.printAllHigherThanNum(400);
     }
     
     public void testUniqueIPVisitsOnDay(){
         // create a LogAnalyzer object
         LogAnalyzer la = new LogAnalyzer();
-        la.readFile("weblog-short_log");
-        la.uniqueIPVisitsOnDay("Sep 14");
-        la.uniqueIPVisitsOnDay("Sep 30");
+        la.readFile("weblog1_log");
+        // la.uniqueIPVisitsOnDay("Sep 14");
+        // la.uniqueIPVisitsOnDay("Sep 30");
+        la.uniqueIPVisitsOnDay("Mar 24");
     }
 
     public void testCountUniqueIPsInRange(){
         LogAnalyzer la = new LogAnalyzer();
-        la.readFile("short-test_log");
+        la.readFile("weblog1_log");
         System.out.println(la.countUniqueIPsInRange(200, 299));
-        System.out.println(la.countUniqueIPsInRange(300, 399));
+        // System.out.println(la.countUniqueIPsInRange(300, 399));
     }
 }
