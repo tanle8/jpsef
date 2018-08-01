@@ -12,4 +12,6 @@ comment5.params=
 comment5.target=void\ testUniqueIPVisitsOnDay()
 comment6.params=
 comment6.target=void\ testCountUniqueIPsInRange()
-numComments=7
+comment7.params=
+comment7.target=void\ testCountVisitsPerIP()
+numComments=8

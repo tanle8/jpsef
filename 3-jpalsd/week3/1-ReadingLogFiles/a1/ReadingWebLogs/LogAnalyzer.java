@@ -108,4 +108,21 @@ public class LogAnalyzer
         
         return uniqueIPsInRange.size();
     }
+
+    public HashMap<String, Integer> countVisitsPerIP(){
+        HashMap<String, Integer> counts = new HashMap<String, Integer>();
+        // For each LogEntry object in records
+        for (LogEntry le : records){
+            // ip is le's ipAddress
+            String ip = le.getIpAddress();
+            if (!counts.containsKey(ip)){
+                counts.put(ip, 1);
+            } else {
+                counts.put(ip, counts.get(ip) + 1);
+            }
+        }
+
+        return counts;
+    }
+
 }

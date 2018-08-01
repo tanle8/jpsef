@@ -55,4 +55,11 @@ public class Tester
         System.out.println(la.countUniqueIPsInRange(200, 299));
         // System.out.println(la.countUniqueIPsInRange(300, 399));
     }
+    
+    public void testCountVisitsPerIP(){
+        LogAnalyzer la = new LogAnalyzer();
+        la.readFile("weblog1_log");
+        HashMap<String, Integer> counts = la.countVisitsPerIP();
+        System.out.println(counts);
+    }
 }
