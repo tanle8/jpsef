@@ -70,4 +70,17 @@ public class Tester
 		int mostNumberVisits = la.mostNumberVisitsByIP(counts);
 		System.out.println(mostNumberVisits);
 	}
+
+	public void testIPsMostVisits(){
+		LogAnalyzer la = new LogAnalyzer();
+		la.readFile("weblog3-short_log");
+
+		HashMap<String, Integer> counts = la.countVisitsPerIP();
+		ArrayList<String> iPsMostVisitsList = la.iPsMostVisits(counts);
+
+		System.out.println("The size of IPs most visit list: " + iPsMostVisitsList.size());
+		for (String ip : iPsMostVisitsList){
+			System.out.println(ip);
+		}
+	}
 }

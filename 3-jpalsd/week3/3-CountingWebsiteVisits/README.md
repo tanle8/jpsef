@@ -22,13 +22,13 @@ You should write code to test the methods in a `Tester` class that creates a Log
 
 Specifically, you should do the following:
 
-- In the `LogAnalyzer` class, write the method `countVisitsPerIP`,
+- [x] In the `LogAnalyzer` class, write the method `countVisitsPerIP`,
     - which has no parameters.
     - This method returns a `HashMap<String, Integer>` that maps an IP address to the number of times that IP address appears in records, meaning the number of times this IP address visited the website.
     - Recall that `records` stores LogEntrys from a file of web logs.
     - For help, refer to the video in this lesson on translating to code. Be sure to test this method on sample files.
 
-- In the `LogAnalyzer` class, write the method `mostNumberVisitsByIP`,
+- [x] In the `LogAnalyzer` class, write the method `mostNumberVisitsByIP`,
     - which has one parameter, a `HashMap<String, Integer>` that maps an IP address to the number of times that IP address appears in the web log file.
     - This method returns the maximum number of visits to this website by a single `IP address`. For example,
 		- the call `mostNumberVisitsByIP` on a HashMap formed using the file `weblog3-short_log` returns 3.

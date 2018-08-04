@@ -136,4 +136,18 @@ public class LogAnalyzer
 
 		return maxValue;
 	}
+
+	public ArrayList<String> iPsMostVisits(HashMap<String, Integer> counts){
+		ArrayList<String> iPsMostVisitsList = new ArrayList<String>();
+		int maxVisitsValue = mostNumberVisitsByIP(counts);
+
+		for (String currKey : counts.keySet()){
+			if (counts.get(currKey) == maxVisitsValue){
+				iPsMostVisitsList.add(currKey);
+			}
+		}
+
+		return iPsMostVisitsList;
+	}
+	
 }
