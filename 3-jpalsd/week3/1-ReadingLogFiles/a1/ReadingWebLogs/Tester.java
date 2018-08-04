@@ -61,5 +61,13 @@ public class Tester
         la.readFile("weblog1_log");
         HashMap<String, Integer> counts = la.countVisitsPerIP();
         System.out.println(counts);
-    }
+	}
+	
+	public void testMostNumberVisitsByIP(){
+		LogAnalyzer la = new LogAnalyzer();
+		la.readFile("weblog3-short_log");
+		HashMap<String, Integer> counts = la.countVisitsPerIP();
+		int mostNumberVisits = la.mostNumberVisitsByIP(counts);
+		System.out.println(mostNumberVisits);
+	}
 }

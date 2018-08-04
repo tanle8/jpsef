@@ -109,6 +109,7 @@ public class LogAnalyzer
         return uniqueIPsInRange.size();
     }
 
+    /** */
     public HashMap<String, Integer> countVisitsPerIP(){
         HashMap<String, Integer> counts = new HashMap<String, Integer>();
         // For each LogEntry object in records
@@ -125,4 +126,14 @@ public class LogAnalyzer
         return counts;
     }
 
+    public int mostNumberVisitsByIP(HashMap<String, Integer> counts){
+		int maxValue = 0;
+		for (String currKey : counts.keySet()){
+			if (counts.get(currKey) > maxValue){
+				maxValue = counts.get(currKey);
+			}
+		}
+
+		return maxValue;
+	}
 }

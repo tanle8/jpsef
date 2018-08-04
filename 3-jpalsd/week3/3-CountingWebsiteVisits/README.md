@@ -30,7 +30,8 @@ Specifically, you should do the following:
 
 - In the `LogAnalyzer` class, write the method `mostNumberVisitsByIP`,
     - which has one parameter, a `HashMap<String, Integer>` that maps an IP address to the number of times that IP address appears in the web log file.
-    - This method returns the maximum number of visits to this website by a single IP address. For example, the call `mostNumberVisitsByIP` on a HashMap formed using the file `weblog3-short_log` returns 3.
+    - This method returns the maximum number of visits to this website by a single `IP address`. For example,
+		- the call `mostNumberVisitsByIP` on a HashMap formed using the file `weblog3-short_log` returns 3.
 
 - In the `LogAnalyzer` class, write the method `iPsMostVisits`,
     - which has one parameter, a `HashMap<String, Integer>` that maps an IP address to the number of times that IP address appears in the web log file.
