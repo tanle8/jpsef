@@ -150,4 +150,7 @@ public class LogAnalyzer
 		return iPsMostVisitsList;
 	}
 	
+	public HashMap<String, ArrayList<String>> iPsForDays(){
+		
+	}
 }
