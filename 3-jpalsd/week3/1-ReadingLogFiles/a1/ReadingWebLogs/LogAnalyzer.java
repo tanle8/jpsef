@@ -177,4 +177,24 @@ public class LogAnalyzer
 
 		return map;
 	}
+
+	/**
+	 * This method returns the day that has the most IP address visits.
+	 * @param 
+	 * @return
+	 */
+	public String dayWithMostIPVisits(HashMap<String, ArrayList<String>> dayIPsMap){
+		int maxSize = 0;
+		String dayWithMostIPVisit = null;
+
+		for (String day : dayIPsMap.keySet()){
+			int dayValueSize = dayIPsMap.get(day).size();
+			if (dayValueSize > maxSize){
+				maxSize = dayValueSize;
+				dayWithMostIPVisit = day;
+			}
+		}
+
+		return dayWithMostIPVisit;
+	}
 }

@@ -94,4 +94,12 @@ public class Tester
 		HashMap<String, ArrayList<String>> map = la.iPsForDays();
 		System.out.println("Visitors in days: \n" + map);
 	}
+
+	public void testDayWithMostIPVisits(){
+		LogAnalyzer la = new LogAnalyzer();
+		la.readFile("weblog3-short_log");
+		HashMap<String, ArrayList<String>> map = la.iPsForDays();
+		String day = la.dayWithMostIPVisits(map);
+		System.out.println(day);
+	}
 }

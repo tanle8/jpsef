@@ -38,7 +38,7 @@ Specifically, you should do the following:
     - This method returns an `ArrayList` of Strings of IP addresses that all have the maximum number of visits to this website.
     - For example, the call `iPsMostVisits` on a HashMap formed using the file `weblog3-short_log` returns the ArrayList with these two IP addresses, `61.15.121.171` and `84.133.195.161`. Both of them visited the site three times, which is the maximum number of times any IP address visited the site.
 
-- In the `LogAnalyzer` class, write the method `iPsForDays`,
+- [x] In the `LogAnalyzer` class, write the method `iPsForDays`,
     - which has no parameters.
     - This method returns a `HashMap<String, ArrayList<String>>` that uses `records` and maps days from `web logs` to an `ArrayList of IP addresses` that occurred on that day (including repeated IP addresses).
     - A day is in the format "`MMM DD`" where MMM is the first three characters of the month name with the first letter capital and the others in lowercase, and DD is the day in two digits (examples are "Dec 05" and "Apr 22").
@@ -47,7 +47,7 @@ Specifically, you should do the following:
         - "Sep 21" maps to _four_ `IP addresses`, and
         - "Sep 30" maps to _five_ `IP addresses`.
 
-- In the `LogAnalyzer` class, write the method `dayWithMostIPVisits`,
+- [x] In the `LogAnalyzer` class, write the method `dayWithMostIPVisits`,
     - which has one parameter that is a `HashMap<String, ArrayList<String>>` that uses records and maps days from web logs to an ArrayList of IP addresses that occurred on that day.
     - This method returns the day that has the most IP address visits. If there is a tie, then return any such day.
     - For example, if you use the file `weblog3-short_log`, then this method should return the day most visited as `Sep 30`.
