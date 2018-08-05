@@ -2,6 +2,11 @@
 comment0.target=LogAnalyzer
 comment1.params=
 comment1.target=LogAnalyzer()
+comment10.params=counts
+comment10.target=java.util.ArrayList\ iPsMostVisits(java.util.HashMap)
+comment11.params=
+comment11.target=java.util.HashMap\ iPsForDays()
+comment11.text=\n\ This\ method\ returns\ map\ with\ a\ day\ (String)\ and\ which\ IPs\ visit\ web\ page\ in\ that\n\ day\ (an\ ArrayList\ of\ String)\n\ @return\ map\ HashMap<String,\ ArrayList<String>>\n
 comment2.params=filename
 comment2.target=void\ readFile(java.lang.String)
 comment3.params=
@@ -21,4 +26,4 @@ comment8.target=java.util.HashMap\ countVisitsPerIP()
 comment8.text=
 comment9.params=counts
 comment9.target=int\ mostNumberVisitsByIP(java.util.HashMap)
-numComments=10
+numComments=12

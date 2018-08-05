@@ -150,7 +150,31 @@ public class LogAnalyzer
 		return iPsMostVisitsList;
 	}
 	
+	/**
+	 * This method returns map with a day (String) and which IPs visit web page in that
+	 * day (an ArrayList of String)
+	 * @return map HashMap<String, ArrayList<String>>
+	 */
 	public HashMap<String, ArrayList<String>> iPsForDays(){
-		
+		HashMap<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
+
+		for (LogEntry currRec : records){
+			// Get day from date string
+			String date = currRec.getAccessTime().toString();
+			String day = date.substring(4, 10);		// can be refactored later
+			// Get current record's IP address
+			String ip = currRec.getIpAddress();
+
+			if (!map.containsKey(day)){
+				ArrayList<String> visitorsList = new ArrayList<String>();
+				visitorsList.add(ip);
+				map.put(day, visitorsList);
+			}
+			else {
+				map.get(day).add(ip);
+			}
+		}
+
+		return map;
 	}
 }

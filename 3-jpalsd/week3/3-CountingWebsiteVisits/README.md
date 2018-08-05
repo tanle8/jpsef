@@ -40,7 +40,7 @@ Specifically, you should do the following:
 
 - In the `LogAnalyzer` class, write the method `iPsForDays`,
     - which has no parameters.
-    - This method returns a `HashMap<String, ArrayList<String>>` that uses `records` and `maps` days from `web logs` to an `ArrayList of IP addresses` that occurred on that day (including repeated IP addresses).
+    - This method returns a `HashMap<String, ArrayList<String>>` that uses `records` and maps days from `web logs` to an `ArrayList of IP addresses` that occurred on that day (including repeated IP addresses).
     - A day is in the format "`MMM DD`" where MMM is the first three characters of the month name with the first letter capital and the others in lowercase, and DD is the day in two digits (examples are "Dec 05" and "Apr 22").
     - For example, for the file `weblog3-short_log`, after building this HashMap, if you print it out, you will see that:
         - "Sep 14" maps to _one_ `IP address`,

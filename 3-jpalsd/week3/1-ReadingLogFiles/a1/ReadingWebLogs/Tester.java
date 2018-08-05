@@ -12,7 +12,10 @@ import sun.rmi.runtime.Log;
 
 public class Tester
 {
-    public void testLogEntry() {
+	/**
+	 * a method for testing LogEntry()
+	 */
+	 public void testLogEntry() {
         LogEntry le = new LogEntry("1.2.3.4", new Date(), "example request", 200, 500);
         System.out.println(le);
         LogEntry le2 = new LogEntry("1.2.100.4", new Date(), "example request 2", 300, 400);
@@ -82,5 +85,13 @@ public class Tester
 		for (String ip : iPsMostVisitsList){
 			System.out.println(ip);
 		}
+	}
+
+	public void testIPsForDay(){
+		LogAnalyzer la = new LogAnalyzer();
+		la.readFile("weblog3-short_log");
+
+		HashMap<String, ArrayList<String>> map = la.iPsForDays();
+		System.out.println("Visitors in days: \n" + map);
 	}
 }
