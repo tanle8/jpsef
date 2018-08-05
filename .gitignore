@@ -1,2 +1,6 @@
 # IDE
 .vscode/
+
+# Files
+.ctxt
+.bluej
