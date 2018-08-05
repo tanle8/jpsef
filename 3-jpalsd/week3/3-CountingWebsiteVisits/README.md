@@ -53,7 +53,9 @@ Specifically, you should do the following:
     - For example, if you use the file `weblog3-short_log`, then this method should return the day most visited as `Sep 30`.
 
 - In the `LogAnalyzer` class, write the method `iPsWithMostVisitsOnDay`,
-    - which has two parameters — the first one is a `HashMap<String, ArrayList<String>>` that uses records and maps days from web logs to an ArrayList of IP addresses that occurred on that day, and the second parameter is a String representing a day in the format "MMM DD" described above.
+    - which has two parameters:
+		- the first one is a `HashMap<String, ArrayList<String>>` that uses records and maps days from web logs to an ArrayList of IP addresses that occurred on that day, and
+		- the second parameter is a `String` representing a day in the format "MMM DD" described above.
     - This method returns an `ArrayList<String>` of IP addresses that had the most accesses on the given day.
     - For example, if you use the file `weblog3-short_log`, and the parameter for the day is "Sep 30", then there are two IP addresses in the ArrayList returned: `61.15.121.171` and `177.4.40.87`.
     - Hint: This method should call another method you have written.

@@ -126,6 +126,29 @@ public class LogAnalyzer
         return counts;
     }
 
+	/**
+	 * Count visits per IP on a day
+	 * @param day
+	 * @return counts a map of IP address and its number of visits
+	 */
+	public HashMap<String, Integer> countVisitsPerIP(String day){
+		HashMap<String, Integer> counts = new HashMap<String, Integer>();
+		for (LogEntry le : records){
+			String accessTime = le.getAccessTime().toString();
+			// If it's the day
+			if (accessTime.contains(day)){
+				String ip = le.getIpAddress();
+            	if (!counts.containsKey(ip)){
+            	    counts.put(ip, 1);
+            	} else {
+            	    counts.put(ip, counts.get(ip) + 1);
+            	}	
+			}
+		}
+
+		return counts;
+	}
+
     public int mostNumberVisitsByIP(HashMap<String, Integer> counts){
 		int maxValue = 0;
 		for (String currKey : counts.keySet()){
@@ -196,5 +219,29 @@ public class LogAnalyzer
 		}
 
 		return dayWithMostIPVisit;
+	}
+
+	/**
+	 * This method returns an ArrayList<String> of IP addresses that had the most
+	 * accesses on the given day.
+	 * @param day a day in the format "MMM DD"
+	 * @return iPs A list of IP addresses that has the most accesses on the given day
+	 */
+	public ArrayList<String> iPsWithMostVisitsOnDay(String day){
+		ArrayList<String> iPs = new ArrayList<String>();
+		// Create a map of IP address visits and number of visits on the day
+		HashMap<String, Integer> countsIPsOnDay = countVisitsPerIP(day);
+
+		// Find the largest
+		int maxVisitNum = mostNumberVisitsByIP(countsIPsOnDay);
+
+		// Find the max value in map and fill the list of IPs
+		for (String ip : countsIPsOnDay.keySet()){
+			if (countsIPsOnDay.get(ip) == maxVisitNum){
+				iPs.add(ip);
+			}
+		}
+
+		return iPs;
 	}
 }

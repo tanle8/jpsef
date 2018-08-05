@@ -102,4 +102,12 @@ public class Tester
 		String day = la.dayWithMostIPVisits(map);
 		System.out.println(day);
 	}
+
+	public void testIPsMostVisitsOnDay(){
+		LogAnalyzer la = new LogAnalyzer();
+		la.readFile("weblog3-short_log");
+		ArrayList<String> list = la.iPsWithMostVisitsOnDay("Sep 30");
+		System.out.println(list);
+		
+	}
 }
